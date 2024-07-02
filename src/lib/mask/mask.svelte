@@ -1,5 +1,14 @@
-<img class="mask-heart rounded-md" alt="..." src="https://picsum.photos/id/800/800/300" />
-<img class="mask-triangle rounded-md" alt="..." src="https://picsum.photos/id/800/800/300" />
+<script>
+	export let mask = '';
+	export let alt = '';
+	export let src = '';
+</script>
+
+<img
+	class="{mask === 'heart' ? 'mask-heart' : mask === 'triangle' ? 'mask-triangle' : ''} rounded-md"
+	{alt}
+	{src}
+/>
 
 <style>
 	.mask-heart {

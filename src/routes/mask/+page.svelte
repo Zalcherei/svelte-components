@@ -1,25 +1,19 @@
+<script>
+	import Highlight from '$lib/highlight/highlight.svelte';
+	import Mask from '$lib/mask/mask.svelte';
+
+	let code = `<Mask mask="heart" alt="..." src="https://picsum.photos/id/800/150/75" />
+  <Mask mask="triangle" alt="..." src="https://picsum.photos/id/800/150/150" />`;
+</script>
+
 <svelte:head>
 	<title>Svelte Components - Mask</title>
 </svelte:head>
 
-<div class="flex justify-center">
-	<div class="flex flex-col">
-		<img class="mask-heart rounded-md" alt="..." src="https://picsum.photos/id/800/800/300" />
-		<img class="mask-triangle rounded-md" alt="..." src="https://picsum.photos/id/800/800/300" />
+<div class="flex flex-col justify-center">
+	<div class="flex items-center justify-center">
+		<Mask mask="heart" alt="..." src="https://picsum.photos/id/800/150/100" />
+		<Mask mask="triangle" alt="..." src="https://picsum.photos/id/800/150/150" />
 	</div>
+	<Highlight {code} />
 </div>
-
-<style>
-	.mask-heart {
-		background-repeat: no-repeat;
-		background-size: center/cover;
-		clip-path: path(
-			'M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 Z'
-		);
-	}
-	.mask-triangle {
-		background-repeat: no-repeat;
-		background-size: center/cover;
-		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	}
-</style>

@@ -1,5 +1,5 @@
 <script>
-	import LoaderCircle from 'lucide-svelte/icons/loader-circle';
+	import Loading from '$lib/loading/loading.svelte';
 </script>
 
 <svelte:head>
@@ -7,5 +7,5 @@
 </svelte:head>
 
 <div class="flex justify-center">
-	<LoaderCircle class="animate-spin" />
+	<Loading />
 </div>

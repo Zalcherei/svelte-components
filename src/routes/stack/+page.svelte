@@ -1,73 +1,56 @@
+<script>
+	import Button from '$lib/button/button.svelte';
+	import CardContent from '$lib/card/card-content.svelte';
+	import CardFooter from '$lib/card/card-footer.svelte';
+	import CardHeader from '$lib/card/card-header.svelte';
+	import Card from '$lib/card/card.svelte';
+	import Stack from '$lib/stack/stack.svelte';
+</script>
+
 <svelte:head>
 	<title>Svelte Components - Stack</title>
 </svelte:head>
 
 <div class="flex justify-center">
-	<div
-		class="relative left-0 w-full [&>*:nth-child(1)]:z-40 [&>*:nth-child(1)]:shadow [&>*:nth-child(2)]:top-24 [&>*:nth-child(2)]:z-30 [&>*:nth-child(2)]:shadow [&>*:nth-child(3)]:top-48 [&>*:nth-child(3)]:z-20 [&>*]:absolute"
-	>
-		<div class="flex w-full flex-col rounded-md bg-white dark:bg-neutral-800">
-			<div class="flex h-16 w-full items-center justify-between border-b border-gray-200 px-4">
+	<Stack>
+		<Card>
+			<CardHeader>
 				<div>Card</div>
-			</div>
-			<div class="p-4">
+			</CardHeader>
+			<CardContent>
 				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nisi ut ullam,
 				dignissimos reprehenderit eligendi natus at. Minus, eaque possimus!
-			</div>
-			<div class="flex h-16 w-full items-center border-t border-gray-200 px-4">
-				<button
-					class="me-1 inline-flex h-10 min-w-10 items-center justify-center rounded-md bg-white px-4 transition hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
-				>
-					Accept
-				</button>
-				<button
-					class="me-1 inline-flex h-10 min-w-10 items-center justify-center rounded-md bg-white px-4 transition hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
-				>
-					Decline
-				</button>
-			</div>
-		</div>
-		<div class="flex w-full flex-col rounded-md bg-white dark:bg-neutral-800">
-			<div class="flex h-16 w-full items-center justify-between border-b border-gray-200 px-4">
+			</CardContent>
+			<CardFooter>
+				<Button>Accept</Button>
+				<Button>Decline</Button>
+			</CardFooter>
+		</Card>
+		<Card>
+			<CardHeader>
 				<div>Card</div>
-			</div>
-			<div class="p-4">
+			</CardHeader>
+			<CardContent>
 				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nisi ut ullam,
 				dignissimos reprehenderit eligendi natus at. Minus, eaque possimus!
-			</div>
-			<div class="flex h-16 w-full items-center border-t border-gray-200 px-4">
-				<button
-					class="me-1 inline-flex h-10 min-w-10 items-center justify-center rounded-md bg-white px-4 transition hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
-				>
-					Accept
-				</button>
-				<button
-					class="me-1 inline-flex h-10 min-w-10 items-center justify-center rounded-md bg-white px-4 transition hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
-				>
-					Decline
-				</button>
-			</div>
-		</div>
-		<div class="flex w-full flex-col rounded-md bg-white dark:bg-neutral-800">
-			<div class="flex h-16 w-full items-center justify-between border-b border-gray-200 px-4">
+			</CardContent>
+			<CardFooter>
+				<Button>Accept</Button>
+				<Button>Decline</Button>
+			</CardFooter>
+		</Card>
+		<Card>
+			<CardHeader>
 				<div>Card</div>
-			</div>
-			<div class="p-4">
+			</CardHeader>
+			<CardContent>
 				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nisi ut ullam,
 				dignissimos reprehenderit eligendi natus at. Minus, eaque possimus!
-			</div>
-			<div class="flex h-16 w-full items-center border-t border-gray-200 px-4">
-				<button
-					class="me-1 inline-flex h-10 min-w-10 items-center justify-center rounded-md bg-white px-4 transition hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
-				>
-					Accept
-				</button>
-				<button
-					class="me-1 inline-flex h-10 min-w-10 items-center justify-center rounded-md bg-white px-4 transition hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
-				>
-					Decline
-				</button>
-			</div>
-		</div>
-	</div>
+			</CardContent>
+			<CardFooter>
+				<Button>Accept</Button>
+				<Button>Decline</Button>
+			</CardFooter>
+		</Card>
+	</Stack>
 </div>

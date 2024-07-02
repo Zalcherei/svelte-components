@@ -1,45 +1,24 @@
+<script>
+	import Step from '$lib/steps/step.svelte';
+
+	import Steps from '$lib/steps/steps.svelte';
+
+	let steps = [
+		{ id: 1, title: 'Register', complete: true, last: false },
+		{ id: 2, title: 'Choose plan', complete: false, last: false },
+		{ id: 3, title: 'Purchase', complete: false, last: false },
+		{ id: 4, title: 'Receive product', complete: false, last: true }
+	];
+</script>
+
 <svelte:head>
 	<title>Svelte Components - Steps</title>
 </svelte:head>
 
 <div class="flex justify-center">
-	<ul class="flex">
-		<li class="relative flex min-w-32 flex-col items-center">
-			<span
-				class="z-20 flex h-8 w-8 items-center justify-center rounded-full bg-gray-300 dark:bg-neutral-800"
-				>1</span
-			>
-			<span>Register</span>
-			<div
-				class="absolute z-10 h-2 w-32 translate-x-1/2 translate-y-[12px] bg-gray-300 dark:bg-neutral-800"
-			></div>
-		</li>
-		<li class="relative flex min-w-32 flex-col items-center">
-			<span
-				class="z-20 flex h-8 w-8 items-center justify-center rounded-full bg-gray-300 dark:bg-neutral-800"
-				>2</span
-			>
-			<span>Choose plan</span>
-			<div
-				class="absolute z-10 h-2 w-32 translate-x-1/2 translate-y-[12px] bg-white dark:bg-neutral-700"
-			></div>
-		</li>
-		<li class="relative flex min-w-32 flex-col items-center">
-			<span
-				class="z-20 flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-neutral-700"
-				>3</span
-			>
-			<span>Purchase</span>
-			<div
-				class="absolute z-10 h-2 w-32 translate-x-1/2 translate-y-[12px] bg-white dark:bg-neutral-700"
-			></div>
-		</li>
-		<li class="relative flex min-w-32 flex-col items-center">
-			<span
-				class="z-20 flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-neutral-700"
-				>4</span
-			>
-			<span>Receive Product</span>
-		</li>
-	</ul>
+	<Steps>
+		{#each steps as { id, title, complete, last }}
+			<Step {title} {complete} {id} {last} />
+		{/each}
+	</Steps>
 </div>

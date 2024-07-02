@@ -1,9 +1,8 @@
 <script>
-	let activeTab = 1;
-
-	const handleAction = (tab) => {
-		activeTab = tab;
-	};
+	import TabContent from '$lib/tab/tab-content.svelte';
+	import TabWrapper from '$lib/tab/tab-wrapper.svelte';
+	import Tab from '$lib/tab/tab.svelte';
+	import Tabs from '$lib/tab/tabs.svelte';
 </script>
 
 <svelte:head>
@@ -11,44 +10,24 @@
 </svelte:head>
 
 <div class="flex justify-center">
-	<div class="flex w-full flex-col">
-		<div class="flex max-w-max overflow-hidden rounded-t-md bg-white dark:bg-neutral-800">
-			<button
-				class="inline-flex h-10 min-w-10 items-center justify-center bg-white px-4 transition hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
-				on:click={() => handleAction(1)}
-			>
-				Tab 1
-			</button>
-			<button
-				class="inline-flex h-10 min-w-10 items-center justify-center bg-white px-4 transition hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
-				on:click={() => handleAction(2)}
-			>
-				Tab 2
-			</button>
-			<button
-				class="inline-flex h-10 min-w-10 items-center justify-center bg-white px-4 transition hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
-				on:click={() => handleAction(3)}
-			>
-				Tab 3
-			</button>
-		</div>
-		{#if activeTab === 1}
-			<div class="rounded-b-md rounded-tr-md bg-white p-4 dark:bg-neutral-800">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, sapiente.
-			</div>
-		{/if}
-		{#if activeTab === 2}
-			<div class="rounded-tr-md bg-white bg-white p-4 dark:bg-neutral-800">
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, iure deleniti. Sequi
-				debitis nostrum fuga dolore. Sint laborum deleniti aliquid?
-			</div>
-		{/if}
-		{#if activeTab === 3}
-			<div class="rounded-tr-md bg-white bg-white p-4 dark:bg-neutral-800">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et necessitatibus, impedit
-				optio consequuntur sit dignissimos! Cumque, quis? Adipisci numquam aperiam nisi impedit
-				voluptas quis dicta sequi repudiandae molestias dolor!
-			</div>
-		{/if}
-	</div>
+	<TabWrapper>
+		<Tabs>
+			<Tab title="Tab 1" id={1}></Tab>
+			<Tab title="Tab 2" id={2}></Tab>
+			<Tab title="Tab 3" id={3}></Tab>
+		</Tabs>
+
+		<TabContent id={1}>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, velit!
+		</TabContent>
+		<TabContent id={2}>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet at atque, nam tempora
+			voluptatibus praesentium unde esse delectus doloribus suscipit!
+		</TabContent>
+		<TabContent id={3}>
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos velit harum nemo deserunt at?
+			Pariatur, harum. Cum ipsum, magni qui minima a possimus sequi quibusdam mollitia alias,
+			distinctio nulla consectetur.
+		</TabContent>
+	</TabWrapper>
 </div>

@@ -1,10 +1,11 @@
+<script>
+	import Badge from '$lib/badge/badge.svelte';
+</script>
+
 <svelte:head>
 	<title>Svelte Components - Badge</title>
 </svelte:head>
 
 <div class="flex justify-center">
-	<span
-		class="flex items-center justify-center rounded-full bg-white px-2 text-sm dark:bg-neutral-800"
-		>Badge</span
-	>
+	<Badge>Badge</Badge>
 </div>

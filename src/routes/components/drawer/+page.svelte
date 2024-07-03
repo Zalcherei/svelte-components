@@ -38,7 +38,7 @@
 <div class="flex flex-col justify-center">
 	<div class="flex items-center justify-center gap-2">
 		{#if drawer}
-			<Drawer class="h-80">
+			<Drawer class="!h-80">
 				<ul>
 					<li>
 						<a

@@ -1,4 +1,5 @@
 <script>
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import TableHeader from '$lib/table/table-header.svelte';
 	import TableRow from '$lib/table/table-row.svelte';
@@ -32,7 +33,9 @@
 	<title>Svelte Components - Table</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay>
 	<Table>
 		<TableHeader>
 			<th class="min-w-8 px-4 text-start">#</th>
@@ -55,5 +58,5 @@
 			</TableRow>
 		</tbody>
 	</Table>
-	<Highlight {code} />
-</div>
+</HighlightDisplay>
+<Highlight {code} />

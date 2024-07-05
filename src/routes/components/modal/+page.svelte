@@ -1,6 +1,7 @@
 <script>
-	import Button from '$lib/button/button.svelte';
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
+	import Button from '$lib/button/button.svelte';
 	import ModalContent from '$lib/modal/modal-content.svelte';
 	import ModalFooter from '$lib/modal/modal-footer.svelte';
 	import ModalHeader from '$lib/modal/modal-header.svelte';
@@ -34,11 +35,10 @@
 	<title>Svelte Components - Modal</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
-	<div class="flex items-center justify-center">
-		<Button on:click={handleClick}>Modal</Button>
-	</div>
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
 
+<HighlightDisplay class="flex-col">
+	<Button on:click={handleClick}>Modal</Button>
 	{#if modal}
 		<Modal>
 			<ModalHeader>
@@ -57,5 +57,5 @@
 			</ModalFooter>
 		</Modal>
 	{/if}
-	<Highlight {code} />
-</div>
+</HighlightDisplay>
+<Highlight {code} />

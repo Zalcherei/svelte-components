@@ -1,13 +1,19 @@
 <script>
-	import Accordion from '$lib/accordion/accordion.svelte';
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
+	import Accordion from '$lib/accordion/accordion.svelte';
 
 	let code = `<Accordion title="Accordion Item #1">
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, ut.
   </Accordion>
-  <Accordion title="Accordion Item #2">
+  <Accordion variant="shadow" title="Accordion Item #2">
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis tenetur quaerat at
     necessitatibus quia. Est, eos! Similique, eum! Minus, velit.
+  </Accordion>
+  <Accordion variant="outlined" title="Accordion Item #3">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolorum officiis ullam
+    ducimus, deserunt tenetur fugit molestiae voluptatibus aut iste, debitis earum, excepturi quidem
+    mollitia nam impedit adipisci accusantium incidunt.
   </Accordion>`;
 </script>
 
@@ -15,13 +21,20 @@
 	<title>Svelte Components - Accordion</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay class="flex-col">
 	<Accordion title="Accordion Item #1">
 		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, ut.
 	</Accordion>
-	<Accordion title="Accordion Item #2">
+	<Accordion variant="shadow" title="Accordion Item #2">
 		Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis tenetur quaerat at
 		necessitatibus quia. Est, eos! Similique, eum! Minus, velit.
 	</Accordion>
-	<Highlight {code} />
-</div>
+	<Accordion variant="outlined" title="Accordion Item #3">
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolorum officiis ullam
+		ducimus, deserunt tenetur fugit molestiae voluptatibus aut iste, debitis earum, excepturi quidem
+		mollitia nam impedit adipisci accusantium incidunt.
+	</Accordion>
+</HighlightDisplay>
+<Highlight {code} />

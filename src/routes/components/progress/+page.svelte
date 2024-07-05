@@ -1,4 +1,5 @@
 <script>
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Progress from '$lib/progress/progress.svelte';
 
@@ -9,9 +10,9 @@
 	<title>Svelte Components - Progress</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
-	<div class="flex items-center justify-center">
-		<Progress value="50" />
-	</div>
-	<Highlight {code} />
-</div>
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay class="flex-col">
+	<Progress value="50" />
+</HighlightDisplay>
+<Highlight {code} />

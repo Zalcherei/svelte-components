@@ -1,16 +1,18 @@
 <script>
 	import { base } from '$app/paths';
+	import Button from '$lib/button/button.svelte';
+	import Footer from '$lib/footer/footer.svelte';
 	import Hero from '$lib/hero/hero.svelte';
-	import Link from '$lib/link/link.svelte';
 </script>
 
 <svelte:head>
-	<title>Svelte Components - Home</title>
+	<title>Svelte-Components - Home</title>
 </svelte:head>
 
-<Hero title="Svelte-components" description="Svelte components coupled with tailwindcss">
-	<Link
-		class="me-1 inline-flex h-10 min-w-10 items-center justify-center rounded-md bg-white px-4 transition hover:bg-gray-100 hover:text-white hover:no-underline dark:bg-neutral-800 dark:hover:bg-neutral-700"
-		href="{base}/components">Get Started</Link
-	>
+<Hero title="Svelte-Component" description="UI components made with svelte and Tailwind CSS">
+	<div class="flex gap-2">
+		<Button href="{base}/components">Get Started</Button>
+		<Button href="https://github.com/Zalcherei/svelte-components" target="_blank">Github</Button>
+	</div>
 </Hero>
+<Footer></Footer>

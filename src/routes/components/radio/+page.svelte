@@ -1,4 +1,5 @@
 <script>
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Radio from '$lib/radio/radio.svelte';
 
@@ -11,11 +12,11 @@
 	<title>Svelte Components - Radio</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
-	<div class="flex items-center justify-center">
-		<Radio name="radio" checked />
-		<Radio name="radio" />
-		<Radio name="radio" />
-	</div>
-	<Highlight {code} />
-</div>
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay>
+	<Radio name="radio" checked />
+	<Radio name="radio" />
+	<Radio name="radio" />
+</HighlightDisplay>
+<Highlight {code} />

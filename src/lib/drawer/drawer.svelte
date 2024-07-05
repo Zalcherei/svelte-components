@@ -1,14 +1,10 @@
 <script>
-	import { quintInOut } from 'svelte/easing';
-	import { slide } from 'svelte/transition';
-
 	let clazz = '';
 	export { clazz as class };
 </script>
 
 <div
-	class="h-screen w-64 overflow-y-auto bg-white p-2 shadow dark:bg-neutral-800 {clazz}"
-	transition:slide={{ axis: 'x', easing: quintInOut }}
+	class="flex h-[calc(100vh-64px)] w-64 min-w-64 flex-col border-r border-gray-200 bg-white dark:border-neutral-700 dark:bg-neutral-800 [&>button]:justify-start {clazz}"
 >
 	<slot></slot>
 </div>

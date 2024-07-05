@@ -1,6 +1,7 @@
 <script>
 	import Button from '$lib/button/button.svelte';
 	import Hero from '$lib/hero/hero.svelte';
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 
 	let code = `<Hero
@@ -17,7 +18,9 @@
 	<title>Svelte Components - Hero</title>
 </svelte:head>
 
-<div class="relative flex flex-col justify-center">
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay>
 	<Hero
 		title="Welcome"
 		description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus libero corrupti quia
@@ -26,5 +29,5 @@
 	>
 		<Button>Get Started</Button>
 	</Hero>
-	<Highlight {code} />
-</div>
+</HighlightDisplay>
+<Highlight {code} />

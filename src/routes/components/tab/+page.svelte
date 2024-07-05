@@ -1,4 +1,5 @@
 <script>
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import TabContent from '$lib/tab/tab-content.svelte';
 	import TabWrapper from '$lib/tab/tab-wrapper.svelte';
@@ -11,7 +12,6 @@
       <Tab title="Tab 2" id={2}></Tab>
       <Tab title="Tab 3" id={3}></Tab>
     </Tabs>
-
     <TabContent id={1}>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, velit!
     </TabContent>
@@ -32,14 +32,15 @@
 	<title>Svelte Components - Tabs</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay class="flex-col">
 	<TabWrapper>
 		<Tabs>
 			<Tab title="Tab 1" id={1}></Tab>
 			<Tab title="Tab 2" id={2}></Tab>
 			<Tab title="Tab 3" id={3}></Tab>
 		</Tabs>
-
 		<TabContent id={1}>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, velit!
 		</TabContent>
@@ -53,5 +54,5 @@
 			distinctio nulla consectetur.
 		</TabContent>
 	</TabWrapper>
-	<Highlight {code} />
-</div>
+</HighlightDisplay>
+<Highlight {code} />

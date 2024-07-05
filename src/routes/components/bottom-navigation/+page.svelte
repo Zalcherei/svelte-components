@@ -1,6 +1,7 @@
 <script>
 	import { base } from '$app/paths';
 	import BottomNavigation from '$lib/bottom-navigation/bottom-navigation.svelte';
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Link from '$lib/link/link.svelte';
 	import BarChart from 'lucide-svelte/icons/bar-chart';
@@ -36,7 +37,9 @@
 	<title>Svelte Components - Bottom navigation</title>
 </svelte:head>
 
-<div class="relative flex flex-col justify-center">
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay>
 	<BottomNavigation class="!relative">
 		<Link
 			class="flex h-16 w-full items-center justify-center transition hover:bg-gray-200 hover:text-white dark:hover:bg-neutral-700"
@@ -57,5 +60,5 @@
 			<BarChart />
 		</Link>
 	</BottomNavigation>
-	<Highlight {code} />
-</div>
+</HighlightDisplay>
+<Highlight {code} />

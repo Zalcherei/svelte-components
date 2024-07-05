@@ -1,5 +1,6 @@
 <script>
 	import Alert from '$lib/alert/alert.svelte';
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 
 	let code = `<Alert>Alert</Alert>`;
@@ -9,7 +10,9 @@
 	<title>Svelte Components - Alert</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay class="flex-col">
 	<Alert>Alert</Alert>
-	<Highlight {code} />
-</div>
+</HighlightDisplay>
+<Highlight {code} />

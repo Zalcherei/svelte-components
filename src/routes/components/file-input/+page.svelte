@@ -1,4 +1,5 @@
 <script>
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import FileInput from '$lib/file-input/file-input.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 
@@ -9,9 +10,9 @@
 	<title>Svelte Components - File input</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
-	<div class="flex items-center justify-center">
-		<FileInput />
-	</div>
-	<Highlight {code} />
-</div>
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay>
+	<FileInput />
+</HighlightDisplay>
+<Highlight {code} />

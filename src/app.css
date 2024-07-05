@@ -4,5 +4,5 @@
 
 body {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  @apply bg-white dark:bg-neutral-900 text-black dark:text-white;
+  @apply bg-gray-100 dark:bg-neutral-900 text-black dark:text-white;
 }

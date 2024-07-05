@@ -1,4 +1,5 @@
 <script>
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Step from '$lib/steps/step.svelte';
 
@@ -11,8 +12,7 @@
 		{ id: 4, title: 'Receive product', complete: false, last: true }
 	];
 
-	let code = `let steps = [...];
-  <Steps>
+	let code = `<Steps>
     {#each steps as { id, title, complete, last }}
       <Step {title} {complete} {id} {last} />
     {/each}
@@ -23,13 +23,13 @@
 	<title>Svelte Components - Steps</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
-	<div class="flex items-center justify-center">
-		<Steps>
-			{#each steps as { id, title, complete, last }}
-				<Step {title} {complete} {id} {last} />
-			{/each}
-		</Steps>
-	</div>
-	<Highlight {code} />
-</div>
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay class="flex-col">
+	<Steps>
+		{#each steps as { id, title, complete, last }}
+			<Step {title} {complete} {id} {last} />
+		{/each}
+	</Steps>
+</HighlightDisplay>
+<Highlight {code} />

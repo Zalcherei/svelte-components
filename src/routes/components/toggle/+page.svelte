@@ -1,4 +1,5 @@
 <script>
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Toggle from '$lib/toggle/toggle.svelte';
 
@@ -9,9 +10,9 @@
 	<title>Svelte Components - Toggle</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
-	<div class="flex items-center justify-center">
-		<Toggle>Toggle me</Toggle>
-	</div>
-	<Highlight {code} />
-</div>
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay>
+	<Toggle>Toggle me</Toggle>
+</HighlightDisplay>
+<Highlight {code} />

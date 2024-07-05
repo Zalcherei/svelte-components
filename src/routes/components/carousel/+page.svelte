@@ -1,6 +1,7 @@
 <script>
-	import Carousel from '$lib/carousel/carousel.svelte';
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
+	import Carousel from '$lib/carousel/carousel.svelte';
 
 	let images = [
 		'https://picsum.photos/800/300?1',
@@ -10,17 +11,16 @@
 		'https://picsum.photos/800/300?5'
 	];
 
-	let code = `let images = [...]
-  <Carousel {images} />`;
+	let code = `<Carousel {images} />`;
 </script>
 
 <svelte:head>
 	<title>Svelte Components - Carousel</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
-	<div class="flex items-center justify-center">
-		<Carousel {images} />
-	</div>
-	<Highlight {code} />
-</div>
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay>
+	<Carousel {images} />
+</HighlightDisplay>
+<Highlight {code} />

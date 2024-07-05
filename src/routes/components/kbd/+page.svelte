@@ -1,4 +1,5 @@
 <script>
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Kbd from '$lib/kbd/kbd.svelte';
 
@@ -11,11 +12,11 @@
 	<title>Svelte Components - KBD</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
-	<div class="flex items-center justify-center">
-		<Kbd>Ctrl</Kbd>
-		<Kbd>+</Kbd>
-		<Kbd>Shift</Kbd>
-	</div>
-	<Highlight {code} />
-</div>
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay>
+	<Kbd>Ctrl</Kbd>
+	<Kbd>+</Kbd>
+	<Kbd>Shift</Kbd>
+</HighlightDisplay>
+<Highlight {code} />

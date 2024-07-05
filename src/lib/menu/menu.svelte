@@ -1,3 +1,8 @@
-<ul class="w-64 overflow-hidden rounded-md bg-white dark:bg-neutral-800">
+<script>
+	let clazz = '';
+	export { clazz as class };
+</script>
+
+<ul class="w-auto overflow-hidden rounded-md bg-white dark:bg-neutral-800 {clazz}">
 	<slot></slot>
 </ul>

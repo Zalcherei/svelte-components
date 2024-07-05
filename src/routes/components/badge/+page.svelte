@@ -1,6 +1,7 @@
 <script>
-	import Badge from '$lib/badge/badge.svelte';
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
+	import Badge from '$lib/badge/badge.svelte';
 
 	let code = `<Badge>Badge</Badge>`;
 </script>
@@ -9,9 +10,9 @@
 	<title>Svelte Components - Badge</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
-	<div class="flex items-center justify-center">
-		<Badge>Badge</Badge>
-	</div>
-	<Highlight {code} />
-</div>
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay>
+	<Badge>Badge</Badge>
+</HighlightDisplay>
+<Highlight {code} />

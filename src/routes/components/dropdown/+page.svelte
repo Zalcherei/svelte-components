@@ -1,21 +1,18 @@
 <script>
 	import { base } from '$app/paths';
 	import Dropdown from '$lib/dropdown/dropdown.svelte';
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
+	import MenuItem from '$lib/menu/menu-item.svelte';
+	import Menu from '$lib/menu/menu.svelte';
 
-	let code = `<Dropdown title="Dropdown">
-    <a class="flex h-10 items-center px-4 hover:bg-gray-100 dark:hover:bg-neutral-700" href="/">
-      Item 1
-    </a>
-    <a class="flex h-10 items-center px-4 hover:bg-gray-100 dark:hover:bg-neutral-700" href="/">
-      Item 2
-    </a>
-    <a class="flex h-10 items-center px-4 hover:bg-gray-100 dark:hover:bg-neutral-700" href="/">
-      Item 3
-    </a>
-    <a class="flex h-10 items-center px-4 hover:bg-gray-100 dark:hover:bg-neutral-700" href="/">
-      Item 4
-    </a>
+	let code = `<Dropdown variant="text" title="Dropdown">
+    <Menu>
+      <MenuItem href={base}>Item 1</MenuItem>
+      <MenuItem href={base}>Item 2</MenuItem>
+      <MenuItem href={base}>Item 3</MenuItem>
+      <MenuItem href={base}>Item 4</MenuItem>
+    </Menu>
   </Dropdown>`;
 </script>
 
@@ -23,34 +20,16 @@
 	<title>Svelte Components - Dropdown</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
-	<div class="flex items-center justify-center">
-		<Dropdown title="Dropdown">
-			<a
-				class="flex h-10 items-center px-4 hover:bg-gray-100 dark:hover:bg-neutral-700"
-				href={base}
-			>
-				Item 1
-			</a>
-			<a
-				class="flex h-10 items-center px-4 hover:bg-gray-100 dark:hover:bg-neutral-700"
-				href={base}
-			>
-				Item 2
-			</a>
-			<a
-				class="flex h-10 items-center px-4 hover:bg-gray-100 dark:hover:bg-neutral-700"
-				href={base}
-			>
-				Item 3
-			</a>
-			<a
-				class="flex h-10 items-center px-4 hover:bg-gray-100 dark:hover:bg-neutral-700"
-				href={base}
-			>
-				Item 4
-			</a>
-		</Dropdown>
-	</div>
-	<Highlight {code} />
-</div>
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay class="flex-col">
+	<Dropdown variant="text" title="Dropdown">
+		<Menu>
+			<MenuItem href={base}>Item 1</MenuItem>
+			<MenuItem href={base}>Item 2</MenuItem>
+			<MenuItem href={base}>Item 3</MenuItem>
+			<MenuItem href={base}>Item 4</MenuItem>
+		</Menu>
+	</Dropdown>
+</HighlightDisplay>
+<Highlight {code} />

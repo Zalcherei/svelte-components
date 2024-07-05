@@ -1,5 +1,6 @@
 <script>
 	import { base } from '$app/paths';
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Link from '$lib/link/link.svelte';
 
@@ -10,9 +11,9 @@
 	<title>Svelte Components - Link</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
-	<div class="flex items-center justify-center">
-		<Link href={base}>Link</Link>
-	</div>
-	<Highlight {code} />
-</div>
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay>
+	<Link href={base}>Link</Link>
+</HighlightDisplay>
+<Highlight {code} />

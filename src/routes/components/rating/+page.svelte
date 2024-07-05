@@ -1,4 +1,5 @@
 <script>
+	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Rating from '$lib/rating/rating.svelte';
 
@@ -9,9 +10,9 @@
 	<title>Svelte Components - Rating</title>
 </svelte:head>
 
-<div class="flex flex-col justify-center">
-	<div class="flex items-center justify-center">
-		<Rating stars={5} />
-	</div>
-	<Highlight {code} />
-</div>
+<h3 clasS="text-3xl mb-4">Default Usage</h3>
+
+<HighlightDisplay>
+	<Rating stars={5} />
+</HighlightDisplay>
+<Highlight {code} />

@@ -3,14 +3,26 @@
 	import ChevronDown from 'lucide-svelte/icons/chevron-down';
 	import { slide } from 'svelte/transition';
 
+	let clazz = '';
+	export let variant = '';
 	export let title = '';
+	export { clazz as class };
 	let accordion = false;
 	const handleClick = () => {
 		accordion = !accordion;
 	};
 </script>
 
-<div class="mb-1 w-full overflow-hidden rounded-md bg-white dark:bg-neutral-800">
+<div
+	class="mb-1 w-full overflow-hidden rounded-md bg-white dark:bg-neutral-800 {clazz} {variant ===
+	'outlined'
+		? 'border border-gray-200 shadow-none dark:border-neutral-700'
+		: variant === 'text'
+			? 'shadow-none'
+			: variant === 'shadow'
+				? 'shadow'
+				: ''}"
+>
 	<Button class="w-full justify-between rounded-none" on:click={handleClick}>
 		{title}
 		<ChevronDown />

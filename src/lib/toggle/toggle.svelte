@@ -1,8 +1,14 @@
-<label class="relative inline-flex cursor-pointer items-center">
-	<input id="switch" type="checkbox" class="peer sr-only" />
-	<label for="switch" class="hidden"></label>
+<script>
+	let clazz = '';
+	export let id = '';
+	export { clazz as class };
+</script>
+
+<label for={id} class="relative flex cursor-pointer items-center {clazz}">
+	<input type="checkbox" {id} class="peer sr-only" />
+	<div class="h-4 w-10 rounded-full bg-gray-200 shadow-inner dark:bg-neutral-700"></div>
 	<div
-		class="peer h-6 w-11 rounded-full border bg-gray-200 after:absolute after:left-[2px] after:top-0.5 after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-gray-300 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:ring-green-300 dark:border-neutral-700 dark:bg-neutral-800 dark:after:border-neutral-700 after:dark:bg-neutral-500 dark:peer-checked:border-neutral-700 dark:peer-checked:bg-neutral-800 dark:peer-checked:after:border-neutral-700"
+		class="absolute h-6 w-6 rounded-full bg-white shadow transition peer-checked:translate-x-full peer-checked:bg-gray-100 dark:bg-neutral-600 peer-checked:dark:bg-neutral-500"
 	></div>
 	<span class="ml-2"><slot></slot></span>
 </label>

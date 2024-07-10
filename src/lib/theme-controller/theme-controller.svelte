@@ -4,6 +4,7 @@
 	import Moon from 'lucide-svelte/icons/moon';
 	import Sun from 'lucide-svelte/icons/sun';
 
+	export let variant = '';
 	let darkMode = false;
 
 	const handleAction = () => {
@@ -30,7 +31,7 @@
 	}
 </script>
 
-<Button size="icon" on:click={handleAction}>
+<Button {variant} size="icon" on:click={handleAction}>
 	{#if darkMode}
 		<Moon />
 	{:else}

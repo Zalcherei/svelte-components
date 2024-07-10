@@ -1,5 +1,6 @@
 <script>
 	import { base } from '$app/paths';
+	import Button from '$lib/button/button.svelte';
 	import Dropdown from '$lib/dropdown/dropdown.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
@@ -7,12 +8,10 @@
 	import Menu from '$lib/menu/menu.svelte';
 
 	let code = `<Dropdown variant="text" title="Dropdown">
-    <Menu>
-      <MenuItem href={base}>Item 1</MenuItem>
-      <MenuItem href={base}>Item 2</MenuItem>
-      <MenuItem href={base}>Item 3</MenuItem>
-      <MenuItem href={base}>Item 4</MenuItem>
-    </Menu>
+    <Button variant="text" href="/">Item 1</Button>
+    <Button variant="text" href="/">Item 2</Button>
+    <Button variant="text" href="/">Item 3</Button>
+    <Button variant="text" href="/">Item 4</Button>
   </Dropdown>`;
 </script>
 
@@ -24,12 +23,10 @@
 
 <HighlightDisplay class="flex-col">
 	<Dropdown variant="text" title="Dropdown">
-		<Menu>
-			<MenuItem href={base}>Item 1</MenuItem>
-			<MenuItem href={base}>Item 2</MenuItem>
-			<MenuItem href={base}>Item 3</MenuItem>
-			<MenuItem href={base}>Item 4</MenuItem>
-		</Menu>
+		<Button variant="text" href="{base}/">Item 1</Button>
+		<Button variant="text" href="{base}/">Item 2</Button>
+		<Button variant="text" href="{base}/">Item 3</Button>
+		<Button variant="text" href="{base}/">Item 4</Button>
 	</Dropdown>
 </HighlightDisplay>
 <Highlight {code} />

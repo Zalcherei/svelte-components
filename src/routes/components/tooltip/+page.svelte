@@ -4,20 +4,16 @@
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Tooltip from '$lib/tooltip/tooltip.svelte';
 
-	let code = `<Button class="group relative">
-    Left
+	let code = `<Button label="Left" class="group">
     <Tooltip align="left">Left tooltip</Tooltip>
   </Button>
-  <Button class="group relative">
-    Top
+  <Button label="Top" class="group">
     <Tooltip align="top">Top tooltip</Tooltip>
   </Button>
-  <Button class="group relative">
-    Bottom
+  <Button label="Bottom" class="group">
     <Tooltip align="bottom">Bottom tooltip</Tooltip>
   </Button>
-  <Button class="group relative">
-    Right
+  <Button label="Right" class="group">
     <Tooltip align="right">Right tooltip</Tooltip>
   </Button>`;
 </script>
@@ -29,20 +25,16 @@
 <h3 clasS="text-3xl mb-4">Default Usage</h3>
 
 <HighlightDisplay>
-	<Button class="group relative">
-		Left
+	<Button label="Left" class="group">
 		<Tooltip align="left">Left tooltip</Tooltip>
 	</Button>
-	<Button class="group relative">
-		Top
+	<Button label="Top" class="group">
 		<Tooltip align="top">Top tooltip</Tooltip>
 	</Button>
-	<Button class="group relative">
-		Bottom
+	<Button label="Bottom" class="group">
 		<Tooltip align="bottom">Bottom tooltip</Tooltip>
 	</Button>
-	<Button class="group relative">
-		Right
+	<Button label="Right" class="group">
 		<Tooltip align="right">Right tooltip</Tooltip>
 	</Button>
 </HighlightDisplay>

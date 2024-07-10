@@ -4,20 +4,18 @@
 	import Button from '$lib/button/button.svelte';
 	import Menu from 'lucide-svelte/icons/menu';
 	import X from 'lucide-svelte/icons/x';
+	import Swap from '$lib/swap/swap.svelte';
 
-	let swap = false;
-
-	const handleAction = () => {
-		swap = !swap;
-	};
-
-	let code = `<Button size="icon" on:click={handleAction}>
-    {#if swap}
-      <X />
-    {:else}
+	let code = `<Swap>
+    <X slot="from" />
+    <Menu slot="to" />
+  </Swap>
+  <Swap>
+    <Button slot="from">Button</Button>
+    <Button slot="to">
       <Menu />
-    {/if}
-  </Button>`;
+    </Button>
+  </Swap>`;
 </script>
 
 <svelte:head>
@@ -27,12 +25,15 @@
 <h3 clasS="text-3xl mb-4">Default Usage</h3>
 
 <HighlightDisplay class="flex-col">
-	<Button size="icon" on:click={handleAction}>
-		{#if swap}
-			<X />
-		{:else}
+	<Swap>
+		<X slot="from" />
+		<Menu slot="to" />
+	</Swap>
+	<Swap>
+		<Button slot="from">Button</Button>
+		<Button size="icon" slot="to">
 			<Menu />
-		{/if}
-	</Button>
+		</Button>
+	</Swap>
 </HighlightDisplay>
 <Highlight {code} />

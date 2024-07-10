@@ -3,7 +3,7 @@
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Toggle from '$lib/toggle/toggle.svelte';
 
-	let code = `<Toggle>Toggle me</Toggle>`;
+	let code = `<Toggle id="toggle">Toggle me</Toggle>`;
 </script>
 
 <svelte:head>
@@ -13,6 +13,6 @@
 <h3 clasS="text-3xl mb-4">Default Usage</h3>
 
 <HighlightDisplay>
-	<Toggle>Toggle me</Toggle>
+	<Toggle id="toggle">Toggle me</Toggle>
 </HighlightDisplay>
 <Highlight {code} />

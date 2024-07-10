@@ -3,7 +3,6 @@
 	import Badge from '$lib/badge/badge.svelte';
 	import Button from '$lib/button/button.svelte';
 	import Drawer from '$lib/drawer/drawer.svelte';
-	import MenuItem from '$lib/menu/menu-item.svelte';
 	import Menu from '$lib/menu/menu.svelte';
 	import Navbar from '$lib/navbar/navbar.svelte';
 	import Github from 'lucide-svelte/icons/github';
@@ -15,7 +14,7 @@
 				{ name: 'Button', href: 'components/button' },
 				{ name: 'Dropdown', href: 'components/dropdown' },
 				{ name: 'Modal', href: 'components/modal' },
-				{ name: 'Swap', href: 'components/swap', wip: true },
+				{ name: 'Swap', href: 'components/swap' },
 				{ name: 'Theme Controller', href: 'components/theme-controller' }
 			]
 		},
@@ -30,9 +29,9 @@
 				{ name: 'Chat bubble', href: 'components/chat-bubble' },
 				{ name: 'Collapse', href: 'components/collapse' },
 				{ name: 'Countdown', href: 'components/countdown' },
-				{ name: 'Diff', href: 'components/diff', wip: true },
+				{ name: 'Diff', href: 'components/diff' },
 				{ name: 'Kbd', href: 'components/kbd' },
-				{ name: 'Stat', href: 'components/stat', wip: true },
+				{ name: 'Stat', href: 'components/stat' },
 				{ name: 'Table', href: 'components/table' },
 				{ name: 'Timeline', href: 'components/timeline' }
 			]
@@ -79,15 +78,15 @@
 		{
 			name: 'Layout',
 			children: [
-				{ name: 'Artboard', href: 'components/artboard', wip: true },
+				{ name: 'Artboard', href: 'components/artboard' },
 				{ name: 'Divider', href: 'components/divider' },
 				{ name: 'Drawer', href: 'components/drawer' },
 				{ name: 'Footer', href: 'components/footer' },
 				{ name: 'Hero', href: 'components/hero' },
 				{ name: 'Indicator', href: 'components/indicator' },
 				{ name: 'Join (group items)', href: 'components/join' },
-				{ name: 'Mask', href: 'components/mask', wip: true },
-				{ name: 'Stack', href: 'components/stack', wip: true }
+				{ name: 'Mask', href: 'components/mask' },
+				{ name: 'Stack', href: 'components/stack' }
 			]
 		}
 		// {
@@ -106,24 +105,27 @@
 	<Navbar>
 		<a class="font-medium" href="{base}/">Svelte-Components</a>
 		<div class="flex-1"></div>
-		<Button variant="text" href={base}>Components</Button>
-		<Button variant="text" size="icon" href="https://github.com/Zalcherei/svelte-components">
-			<Github class="h-5 w-5" />
-		</Button>
+		<Button label="Components" variant="text" href={base} />
+		<Button
+			variant="text"
+			size="icon"
+			href="https://github.com/Zalcherei/svelte-components"
+			icon={Github}
+		/>
 	</Navbar>
 	<div class="flex h-[calc(100vh-64px)] w-full">
 		<Drawer>
-			<Menu class="overflow-y-auto p-2">
+			<Menu variant="col" class="overflow-y-auto p-2">
 				{#each list as item}
 					<div class="px-2 py-2 font-medium">{item.name}</div>
 					{#if item.children}
 						{#each item.children as child}
-							<MenuItem class="justify-between" href="{base}/{child.href}">
-								{child.name}
-								{#if child.wip}
-									<Badge>WIP</Badge>
-								{/if}
-							</MenuItem>
+							<Button
+								label={child.name}
+								variant="text"
+								class="justify-between"
+								href="{base}/{child.href}"
+							></Button>
 						{/each}
 					{/if}
 				{/each}

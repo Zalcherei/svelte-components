@@ -1,21 +1,17 @@
 <script>
-	import Menu from 'lucide-svelte/icons/menu';
-	import X from 'lucide-svelte/icons/x';
-
+	let clazz = '';
+	export { clazz as class };
 	let swap = false;
-
 	const handleAction = () => {
 		swap = !swap;
 	};
 </script>
 
-<button
-	class="me-1 inline-flex h-10 min-w-10 items-center justify-center rounded-full bg-white transition hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
-	on:click={handleAction}
->
+<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions (because of reasons) -->
+<div class={clazz} role="button" tabindex="0" on:click={handleAction}>
 	{#if swap}
-		<X />
+		<slot name="from"></slot>
 	{:else}
-		<Menu />
+		<slot name="to"></slot>
 	{/if}
-</button>
+</div>

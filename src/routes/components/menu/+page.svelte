@@ -1,15 +1,16 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import Button from '$lib/button/button.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import MenuItem from '$lib/menu/menu-item.svelte';
 	import Menu from '$lib/menu/menu.svelte';
 
 	let code = `<Menu>
-    <MenuItem href="/">Item 1</MenuItem>
-    <MenuItem href="/">Item 2</MenuItem>
-    <MenuItem href="/">Item 3</MenuItem>
-    <MenuItem href="/">Item 4</MenuItem>
+    <Button href="/">Item 1</Button>
+    <Button href="/">Item 2</Button>
+    <Button href="/">Item 3</Button>
+    <Button href="/">Item 4</Button>
   </Menu>`;
 </script>
 
@@ -20,11 +21,11 @@
 <h3 clasS="text-3xl mb-4">Default Usage</h3>
 
 <HighlightDisplay class="flex-col">
-	<Menu>
-		<MenuItem href={base}>Item 1</MenuItem>
-		<MenuItem href={base}>Item 2</MenuItem>
-		<MenuItem href={base}>Item 3</MenuItem>
-		<MenuItem href={base}>Item 4</MenuItem>
+	<Menu variant="col">
+		<Button variant="text" href="{base}/">Item 1</Button>
+		<Button variant="text" href="{base}/">Item 2</Button>
+		<Button variant="text" href="{base}/">Item 3</Button>
+		<Button variant="text" href="{base}/">Item 4</Button>
 	</Menu>
 </HighlightDisplay>
 <Highlight {code} />

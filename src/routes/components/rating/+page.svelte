@@ -13,6 +13,6 @@
 <h3 clasS="text-3xl mb-4">Default Usage</h3>
 
 <HighlightDisplay>
-	<Rating stars={5} />
+	<Rating variant="text" stars={5} />
 </HighlightDisplay>
 <Highlight {code} />

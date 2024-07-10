@@ -19,6 +19,7 @@
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "@tailwindcss/typography": "^0.5.13",
     "@types/eslint": "^8.56.7",
+    "@types/prismjs": "^1.26.4",
     "autoprefixer": "^10.4.19",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.1.0",
@@ -39,7 +40,7 @@
   },
   "type": "module",
   "dependencies": {
-    "highlight.js": "^11.9.0",
-    "lucide-svelte": "^0.399.0"
+    "lucide-svelte": "^0.399.0",
+    "prismjs": "^1.29.0"
   }
 }

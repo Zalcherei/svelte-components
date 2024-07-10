@@ -103,7 +103,7 @@
 </svelte:head>
 
 {#each list as item}
-	<h3 clasS="text-3xl mb-4">{item.name}</h3>
+	<h3 clasS="text-3xl my-4">{item.name}</h3>
 	{#if item.children}
 		<div class="grid grid-cols-3 gap-2">
 			{#each item.children as child}

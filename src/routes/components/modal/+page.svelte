@@ -52,8 +52,8 @@
 				ab dolor quasi necessitatibus enim vel quo?
 			</ModalContent>
 			<ModalFooter>
-				<Button on:click={handleClick}>Accept</Button>
-				<Button on:click={handleClick}>Cancel</Button>
+				<Button class="me-1" on:click={handleClick}>Accept</Button>
+				<Button class="me-1" on:click={handleClick}>Cancel</Button>
 			</ModalFooter>
 		</Modal>
 	{/if}

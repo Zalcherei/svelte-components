@@ -1,4 +1,6 @@
 <script>
+	let clazz = '';
+	export { clazz as class };
 	export let size = '';
 	export let src = '';
 	export let alt = '';
@@ -11,7 +13,7 @@
 			? 'h-12 w-12'
 			: size === 'sm'
 				? 'h-8 w-8'
-				: ''}"
+				: ''} {clazz}"
 	{alt}
 	{src}
 />

@@ -2,8 +2,8 @@
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Button from '$lib/button/button.svelte';
-	import Menu from 'lucide-svelte/icons/menu';
-	import X from 'lucide-svelte/icons/x';
+	import Menu from '$lib/icons/menu.svelte';
+	import X from '$lib/icons/x.svelte';
 	import Swap from '$lib/swap/swap.svelte';
 
 	let code = `<Swap>

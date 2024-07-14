@@ -1,10 +1,12 @@
-<script>
-	export let progress = 0;
-	export let theme = '';
+<script lang="ts">
+	let className: string = '';
+	export { className as class };
+	export let progress: number = 0;
+	export let theme: string = '';
 </script>
 
 <div
-	class="flex h-16 w-16 items-center justify-center rounded-full"
+	class="flex h-16 w-16 items-center justify-center rounded-full {className}"
 	style={theme === 'dark'
 		? `background: radial-gradient(closest-side, rgb(38 38 38) 79%, transparent 80% 100%), conic-gradient(rgb(64 64 64) ${progress}%, rgb(82 82 82) 0)`
 		: theme === 'light'

@@ -1,8 +1,8 @@
-<script>
-	let clazz = '';
-	export { clazz as class };
+<script lang="ts">
+	let className: string = '';
+	export { className as class };
 </script>
 
-<div class="p-4 {clazz}">
+<div class="p-4 {className}">
 	<slot></slot>
 </div>

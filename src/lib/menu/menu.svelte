@@ -1,7 +1,7 @@
-<script>
-	let clazz = '';
-	export let variant = '';
-	export { clazz as class };
+<script lang="ts">
+	let className: string = '';
+	export let variant: string = '';
+	export { className as class };
 </script>
 
 <ul
@@ -10,7 +10,7 @@
 		? 'flex-row'
 		: variant === 'col'
 			? 'flex-col'
-			: ''} {clazz}"
+			: ''} {className}"
 >
 	<slot></slot>
 </ul>

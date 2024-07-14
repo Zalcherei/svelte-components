@@ -1,9 +1,9 @@
-<script>
-	import ChevronLeft from 'lucide-svelte/icons/chevron-left';
-	import ChevronRight from 'lucide-svelte/icons/chevron-right';
+<script lang="ts">
+	import ChevronLeft from '$lib/icons/chevron-left.svelte';
+	import ChevronRight from '$lib/icons/chevron-right.svelte';
 
-	let currentIndex = 0;
-	export let images = [];
+	let currentIndex: number = 0;
+	export let images: Array<string> = [];
 
 	const showPrevImage = () => {
 		currentIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;

@@ -1,8 +1,8 @@
-<script>
-	let clazz = '';
-	export { clazz as class };
-	export let placeholder = '';
-	export let resize = '';
+<script lang="ts">
+	let className: string = '';
+	export { className as class };
+	export let placeholder: string = '';
+	export let resize: string = '';
 </script>
 
 <textarea
@@ -15,7 +15,7 @@
 				? 'resize-y'
 				: resize === 'resize-none'
 					? 'resize-none'
-					: ''} {clazz}"
+					: ''} {className}"
 	{placeholder}
 >
 </textarea>

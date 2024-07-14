@@ -6,7 +6,7 @@
 	import ModalFooter from '$lib/modal/modal-footer.svelte';
 	import ModalHeader from '$lib/modal/modal-header.svelte';
 	import Modal from '$lib/modal/modal.svelte';
-	import X from 'lucide-svelte/icons/x';
+	import X from '$lib/icons/x.svelte';
 
 	let modal = false;
 	const handleClick = () => {

@@ -4,27 +4,27 @@
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Link from '$lib/link/link.svelte';
-	import BarChart from 'lucide-svelte/icons/bar-chart';
-	import HelpCircle from 'lucide-svelte/icons/circle-help';
-	import Home from 'lucide-svelte/icons/house';
+	import BarChart from '$lib/icons/bar-chart.svelte';
+	import HelpCircle from '$lib/icons/circle-help.svelte';
+	import Home from '$lib/icons/house.svelte';
 
 	let code = `<BottomNavigation>
     <Link
-      class="flex h-16 w-full items-center justify-center transition hover:bg-gray-200 
+      class="flex h-16 w-full items-center justify-center transition hover:bg-gray-200
       hover:text-white dark:hover:bg-neutral-700"
       href="/"
     >
       <Home />
     </Link>
     <Link
-      class="flex h-16 w-full items-center justify-center transition hover:bg-gray-200 
+      class="flex h-16 w-full items-center justify-center transition hover:bg-gray-200
       hover:text-white dark:hover:bg-neutral-700"
       href="/"
     >
       <HelpCircle />
     </Link>
     <Link
-      class="flex h-16 w-full items-center justify-center transition hover:bg-gray-200 
+      class="flex h-16 w-full items-center justify-center transition hover:bg-gray-200
       hover:text-white dark:hover:bg-neutral-700"
       href="/"
     >

@@ -1,11 +1,17 @@
-<script>
-	export let mask = '';
-	export let alt = '';
-	export let src = '';
+<script lang="ts">
+	let className: string = '';
+	export { className as class };
+	export let mask: string = '';
+	export let alt: string = '';
+	export let src: string = '';
 </script>
 
 <img
-	class="{mask === 'heart' ? 'mask-heart' : mask === 'triangle' ? 'mask-triangle' : ''} rounded-md"
+	class="{mask === 'heart'
+		? 'mask-heart'
+		: mask === 'triangle'
+			? 'mask-triangle'
+			: ''} rounded-md {className}"
 	{alt}
 	{src}
 />

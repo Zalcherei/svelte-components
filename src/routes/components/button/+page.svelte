@@ -2,7 +2,7 @@
 	import Button from '$lib/button/button.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
-	import Home from 'lucide-svelte/icons/house';
+	import Home from '$lib/icons/house.svelte';
 
 	let code = `<Button variant="outlined" label="Button" />
   <Button variant="text" label="Button" />

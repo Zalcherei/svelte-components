@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/button/button.svelte';
 	import { slide } from 'svelte/transition';
 
-	let clazz = '';
-	export let variant = '';
-	export let title = '';
-	export { clazz as class };
-	let accordion = false;
+	let className: string = '';
+	export let variant: string = '';
+	export let title: string = '';
+	export { className as class };
+	let accordion: boolean = false;
 	const handleClick = () => {
 		accordion = !accordion;
 	};
@@ -20,7 +20,7 @@
 			? 'shadow-none'
 			: variant === 'shadow'
 				? 'shadow'
-				: ''} {clazz}"
+				: ''} {className}"
 >
 	<Button class="w-full !justify-start !rounded-none" on:click={handleClick}>
 		{title}

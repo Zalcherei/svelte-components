@@ -1,10 +1,10 @@
-<script>
-	let clazz = '';
-	export let id = '';
-	export { clazz as class };
+<script lang="ts">
+	let className: string = '';
+	export let id: string = '';
+	export { className as class };
 </script>
 
-<label for={id} class="relative flex cursor-pointer items-center {clazz}">
+<label for={id} class="relative flex cursor-pointer items-center {className}">
 	<input type="checkbox" {id} class="peer sr-only" />
 	<div class="h-4 w-10 rounded-full bg-gray-200 shadow-inner dark:bg-neutral-700"></div>
 	<div

@@ -1,14 +1,14 @@
-<script>
-	let clazz = '';
-	export { clazz as class };
-	let swap = false;
+<script lang="ts">
+	let className: string = '';
+	export { className as class };
+	let swap: boolean = false;
 	const handleAction = () => {
 		swap = !swap;
 	};
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions (because of reasons) -->
-<div class={clazz} role="button" tabindex="0" on:click={handleAction}>
+<div class={className} role="button" tabindex="0" on:click={handleAction}>
 	{#if swap}
 		<slot name="from"></slot>
 	{:else}

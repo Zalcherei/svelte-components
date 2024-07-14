@@ -1,9 +1,9 @@
-<script>
-	import Check from 'lucide-svelte/icons/check';
+<script lang="ts">
+	import Check from '$lib/icons/check.svelte';
 
-	export let date = '';
-	export let title = '';
-	export let last = false;
+	export let date: string = '';
+	export let title: string = '';
+	export let last: boolean = false;
 </script>
 
 <li class="relative flex min-w-32 flex-col items-center">

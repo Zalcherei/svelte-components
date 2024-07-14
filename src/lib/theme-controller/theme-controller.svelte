@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
 	import { browser } from '$app/environment';
 	import Button from '$lib/button/button.svelte';
-	import Moon from 'lucide-svelte/icons/moon';
-	import Sun from 'lucide-svelte/icons/sun';
+	import Moon from '$lib/icons/moon.svelte';
+	import Sun from '$lib/icons/sun.svelte';
 
-	export let variant = '';
-	let darkMode = false;
+	export let variant: string = '';
+	let darkMode: boolean = false;
 
 	const handleAction = () => {
 		darkMode = !darkMode;

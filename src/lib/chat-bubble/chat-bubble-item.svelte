@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
 	import Avatar from '$lib/avatar/avatar.svelte';
 
-	export let alignment = '';
+	export let alignment: string = '';
 </script>
 
 {#if alignment === 'start'}

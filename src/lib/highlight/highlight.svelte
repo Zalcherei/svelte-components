@@ -2,14 +2,15 @@
 	import { onMount } from 'svelte';
 	import Prism from 'prismjs';
 	import 'prismjs/themes/prism-okaidia.min.css';
-	let language = 'html';
+	import DOMPurify from 'dompurify';
 
-	export let code = ``;
-
-	let highlightedCode: any;
+	let language: string = 'html';
+	let highlightedCode: string;
+	export let code: string = ``;
 
 	onMount(() => {
-		highlightedCode = Prism.highlight(code, Prism.languages[language], 'haml');
+		const rawHighlightedCode = Prism.highlight(code, Prism.languages[language], 'html');
+		highlightedCode = DOMPurify.sanitize(rawHighlightedCode);
 	});
 </script>
 

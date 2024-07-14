@@ -1,20 +1,21 @@
-<script>
-	import ChevronLeft from 'lucide-svelte/icons/chevron-left';
-	import ChevronRight from 'lucide-svelte/icons/chevron-right';
+<script lang="ts">
+	import ChevronLeft from '$lib/icons/chevron-left.svelte';
+	import ChevronRight from '$lib/icons/chevron-right.svelte';
 	import { onMount } from 'svelte';
 
-	export let compare = '';
-	export let compared = '';
+	export let compare: string = '';
+	export let compared: string = '';
 
 	onMount(() => {
 		// set vars
-		const slider = document.getElementById('range-slider');
-		const image = document.getElementsByClassName('image')[1];
-		const buttonRange = document.getElementsByClassName('slider-control')[0];
+		const slider = document.getElementById('range-slider') as HTMLElement;
+		const image = document.getElementsByClassName('image')[1] as HTMLElement;
+		const buttonRange = document.getElementsByClassName('slider-control')[0] as HTMLElement;
 
 		// Move slider and buttonRange at change of value
-		slider.addEventListener('input', (e) => {
-			const sliderPos = e.target.value;
+		slider.addEventListener('input', (e: Event) => {
+			const target = e.target as HTMLInputElement;
+			const sliderPos: string = target.value;
 
 			image.style.width = sliderPos + '%';
 			buttonRange.style.left = sliderPos + '%';
@@ -23,7 +24,9 @@
 </script>
 
 <!-- Image Slider Container -->
-<div class="image-slider-container relative h-[300px] w-full overflow-hidden rounded-md">
+<div
+	class="image-slider-container relative h-[300px] w-full max-w-[800px] overflow-hidden rounded-md"
+>
 	<!-- Upper Image -->
 	<div
 		class="image background-image absolute left-0 top-0 h-full w-full bg-cover bg-center blur-sm grayscale"
@@ -31,7 +34,7 @@
 	></div>
 	<!-- Lower Image -->
 	<div
-		class="image foreground-image absolute left-0 top-0 h-full w-1/2 w-full bg-cover bg-center saturate-150"
+		class="image foreground-image absolute left-0 top-0 h-full w-1/2 bg-cover bg-center saturate-150"
 		style="background: url('{compared}')"
 	></div>
 

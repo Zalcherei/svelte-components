@@ -1,8 +1,8 @@
-<script>
-	let clazz = '';
-	export { clazz as class };
+<script lang="ts">
+	let className: string = '';
+	export { className as class };
 </script>
 
-<table class="w-full overflow-hidden rounded-md {clazz}">
+<table class="w-full overflow-hidden rounded-md {className}">
 	<slot></slot>
 </table>

@@ -1,14 +1,14 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 
-	export let timer = 0;
-	let targetDate = new Date(new Date().getTime() + timer); // one minute
-	let time = targetDate - new Date();
-	let interval;
+	export let timer: number = 0;
+	let targetDate: Date = new Date(new Date().getTime() + timer); // one minute
+	let time: number = targetDate.getTime() - new Date().getTime();
+	let interval: number;
 
 	const updateTimer = () => {
-		const now = new Date();
-		time = targetDate - now;
+		const now: Date = new Date();
+		time = targetDate.getTime() - now.getTime();
 		if (time <= 0) {
 			clearInterval(interval);
 			time = 0;
@@ -20,7 +20,7 @@
 		return () => clearInterval(interval);
 	});
 
-	const formatTime = (ms) => {
+	const formatTime = (ms: number) => {
 		const totalSeconds = Math.floor(ms / 1000);
 		const seconds = totalSeconds % 60;
 		const minutes = Math.floor(totalSeconds / 60) % 60;

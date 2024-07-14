@@ -1,11 +1,14 @@
-<script>
+<script lang="ts">
 	import { getContext } from 'svelte';
 	import { writable } from 'svelte/store';
 	import Button from '../button/button.svelte';
 
 	const activeTab = getContext('activeTab');
-	export let id;
-	export let title = '';
+
+	let className: string = '';
+	export { className as class };
+	export let id: string | number;
+	export let title: string = '';
 
 	$: isActive = $activeTab === id;
 
@@ -16,7 +19,7 @@
 
 <Button
 	on:click={handleClick}
-	class="me-0 rounded-none {isActive ? 'bg-gray-200 dark:bg-neutral-700' : ''}"
+	class="me-0 rounded-none {isActive ? 'bg-gray-200 dark:bg-neutral-700' : ''} {className}"
 >
 	{title}
 </Button>

@@ -1,8 +1,8 @@
-<script>
-	export let title = '';
-	export let id;
-	export let complete = false;
-	export let last = false;
+<script lang="ts">
+	export let title: string = '';
+	export let id: string | number;
+	export let complete: boolean = false;
+	export let last: boolean = false;
 </script>
 
 <li class="relative flex min-w-32 flex-col items-center">

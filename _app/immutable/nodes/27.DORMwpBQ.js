@@ -1,0 +1,10 @@
+import{s as w,a as x,e as y,w as B,g as m,f as b,b as C,m as H,h as I,i as f,t as q,q as S}from"../chunks/scheduler.DwtBEGbz.js";import{S as k,i as j,c as u,a as p,m as g,t as h,b as _,e as d}from"../chunks/index.CY1lfEOF.js";import{B as D}from"../chunks/button.D3Zh8gCS.js";import{H as E,a as P}from"../chunks/highlight.bJcjAWCs.js";import{I as U}from"../chunks/indicator.hWYjySvp.js";function z(i){let n,a,s;return a=new U({}),{c(){n=q(`Button
+		`),u(a.$$.fragment)},l(e){n=S(e,`Button
+		`),p(a.$$.fragment,e)},m(e,r){f(e,n,r),g(a,e,r),s=!0},i(e){s||(h(a.$$.fragment,e),s=!0)},o(e){_(a.$$.fragment,e),s=!1},d(e){e&&m(n),d(a,e)}}}function A(i){let n,a;return n=new D({props:{$$slots:{default:[z]},$$scope:{ctx:i}}}),{c(){u(n.$$.fragment)},l(s){p(n.$$.fragment,s)},m(s,e){g(n,s,e),a=!0},p(s,e){const r={};e&2&&(r.$$scope={dirty:e,ctx:s}),n.$set(r)},i(s){a||(h(n.$$.fragment,s),a=!0)},o(s){_(n.$$.fragment,s),a=!1},d(s){d(n,s)}}}function F(i){let n,a,s="Default Usage",e,r,$,l,c;return r=new E({props:{$$slots:{default:[A]},$$scope:{ctx:i}}}),l=new P({props:{code:i[0]}}),{c(){n=x(),a=y("h3"),a.textContent=s,e=x(),u(r.$$.fragment),$=x(),u(l.$$.fragment),this.h()},l(t){B("svelte-147wqvt",document.head).forEach(m),n=b(t),a=C(t,"H3",{class:!0,"data-svelte-h":!0}),H(a)!=="svelte-9xnfxc"&&(a.textContent=s),e=b(t),p(r.$$.fragment,t),$=b(t),p(l.$$.fragment,t),this.h()},h(){document.title="Svelte Components - Indicator",I(a,"class","text-3xl mb-4")},m(t,o){f(t,n,o),f(t,a,o),f(t,e,o),g(r,t,o),f(t,$,o),g(l,t,o),c=!0},p(t,[o]){const v={};o&2&&(v.$$scope={dirty:o,ctx:t}),r.$set(v)},i(t){c||(h(r.$$.fragment,t),h(l.$$.fragment,t),c=!0)},o(t){_(r.$$.fragment,t),_(l.$$.fragment,t),c=!1},d(t){t&&(m(n),m(a),m(e),m($)),d(r,t),d(l,t)}}}function G(i){return[`<button
+    class="relative me-1 inline-flex h-10 min-w-10 items-center justify-center
+    rounded-md bg-white px-4 transition hover:bg-gray-100 dark:bg-neutral-800
+    dark:hover:bg-neutral-700"
+  >
+    Button
+    <Indicator />
+  </button>`]}class O extends k{constructor(n){super(),j(this,n,G,F,w,{})}}export{O as component};

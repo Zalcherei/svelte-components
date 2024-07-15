@@ -48,7 +48,7 @@
 				</Menu>
 			</Drawer>
 		{/if}
-		<main class="flex-1 overflow-y-auto p-4">
+		<main class="h-[calc(100vh-64px)] flex-1 overflow-y-auto p-4">
 			<slot></slot>
 		</main>
 	</section>

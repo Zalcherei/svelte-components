@@ -8,7 +8,7 @@
 	let className: string = '';
 	export { className as class };
 	export let id: string | number;
-	export let title: string = '';
+	export let label: string = '';
 
 	$: isActive = $activeTab === id;
 
@@ -18,8 +18,8 @@
 </script>
 
 <Button
-	on:click={handleClick}
 	class="me-0 rounded-none {isActive ? 'bg-gray-200 dark:bg-neutral-700' : ''} {className}"
->
-	{title}
-</Button>
+	{label}
+	variant="text"
+	on:click={handleClick}
+/>

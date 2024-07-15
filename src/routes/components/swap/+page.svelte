@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Button from '$lib/button/button.svelte';
-	import Menu from '$lib/icons/menu.svelte';
-	import X from '$lib/icons/x.svelte';
+	import MenuIcon from '$lib/icons/menu.svelte';
+	import XIcon from '$lib/icons/x.svelte';
 	import Swap from '$lib/swap/swap.svelte';
 
 	let code = `<Swap>
@@ -26,14 +26,12 @@
 
 <HighlightDisplay class="flex-col">
 	<Swap>
-		<X slot="from" />
-		<Menu slot="to" />
+		<XIcon slot="from" />
+		<MenuIcon slot="to" />
 	</Swap>
 	<Swap>
-		<Button slot="from">Button</Button>
-		<Button size="icon" slot="to">
-			<Menu />
-		</Button>
+		<Button slot="from" label="Button" />
+		<Button size="icon" slot="to" icon={MenuIcon} />
 	</Swap>
 </HighlightDisplay>
 <Highlight {code} />

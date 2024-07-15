@@ -1,13 +1,13 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/button/button.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Stack from '$lib/stack/stack.svelte';
 
 	let code = `<Stack>
-    <Button>Button 1</Button>
-    <Button>Button 2</Button>
-    <Button>Button 3</Button>
+  	<Button label="Button 1" />
+  	<Button label="Button 2" />
+  	<Button label="Button 3" />
   </Stack>`;
 </script>
 
@@ -19,9 +19,9 @@
 
 <HighlightDisplay>
 	<Stack>
-		<Button>Button 1</Button>
-		<Button>Button 2</Button>
-		<Button>Button 3</Button>
+		<Button label="Button 1" />
+		<Button label="Button 2" />
+		<Button label="Button 3" />
 	</Stack>
 </HighlightDisplay>
 <Highlight {code} />

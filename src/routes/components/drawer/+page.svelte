@@ -4,11 +4,11 @@
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 
-	let code = `<Drawer>
-    <Button variant="text">Item 1</Button>
-    <Button variant="text">Item 2</Button>
-    <Button variant="text">Item 3</Button>
-    <Button variant="text">Item 4</Button>
+	let code = `<Drawer class="max-h-48">
+  	<Button variant="text" label="Item 1" />
+  	<Button variant="text" label="Item 2" />
+  	<Button variant="text" label="Item 3" />
+  	<Button variant="text" label="Item 4" />
   </Drawer>`;
 </script>
 
@@ -20,10 +20,10 @@
 
 <HighlightDisplay class="flex-col">
 	<Drawer class="max-h-48">
-		<Button variant="text">Item 1</Button>
-		<Button variant="text">Item 2</Button>
-		<Button variant="text">Item 3</Button>
-		<Button variant="text">Item 4</Button>
+		<Button variant="text" label="Item 1" />
+		<Button variant="text" label="Item 2" />
+		<Button variant="text" label="Item 3" />
+		<Button variant="text" label="Item 4" />
 	</Drawer>
 </HighlightDisplay>
 <Highlight {code} />

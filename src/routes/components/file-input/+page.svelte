@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import FileInput from '$lib/file-input/file-input.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';

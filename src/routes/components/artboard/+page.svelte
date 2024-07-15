@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Artboard from '$lib/artboard/artboard.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';

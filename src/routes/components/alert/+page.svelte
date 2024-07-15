@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Alert from '$lib/alert/alert.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';

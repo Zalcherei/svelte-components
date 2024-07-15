@@ -27,12 +27,12 @@
 	<Navbar>
 		<a class="font-medium" href={base}>Svelte-Components</a>
 		<div class="flex-1"></div>
-		<Button variant="text">Learn</Button>
+		<Button variant="text" label="Learn" />
 	</Navbar>
 	<Navbar variant="shadow">
 		<a class="font-medium" href={base}>Svelte-Components</a>
 		<div class="flex-1"></div>
-		<Button variant="text">Learn</Button>
+		<Button variant="text" label="Larn" />
 	</Navbar>
 </HighlightDisplay>
 <Highlight {code} />

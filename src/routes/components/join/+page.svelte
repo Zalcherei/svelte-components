@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/button/button.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
@@ -6,20 +6,18 @@
 	import Join from '$lib/join/join.svelte';
 
 	let code = `<Join direction="horizontal">
-    <Button>Button</Button>
-    <Button>Button</Button>
-    <Button class="relative">
-      Button
+  	<Button label="Button" />
+  	<Button label="Button" />
+  	<Button class="relative" label="Button">
       <Indicator />
-    </Button>
+  	</Button>
   </Join>
   <Join direction="vertical">
-    <Button class="relative">
-      Button
+  	<Button class="relative" label="Button">
       <Indicator />
-    </Button>
-    <Button>Button</Button>
-    <Button>Button</Button>
+  	</Button>
+  	<Button label="Button" />
+  	<Button label="Button" />
   </Join>`;
 </script>
 
@@ -31,20 +29,18 @@
 
 <HighlightDisplay>
 	<Join direction="horizontal">
-		<Button>Button</Button>
-		<Button>Button</Button>
-		<Button class="relative">
-			Button
+		<Button label="Button" />
+		<Button label="Button" />
+		<Button class="relative" label="Button">
 			<Indicator />
 		</Button>
 	</Join>
 	<Join direction="vertical">
-		<Button class="relative">
-			Button
+		<Button class="relative" label="Button">
 			<Indicator />
 		</Button>
-		<Button>Button</Button>
-		<Button>Button</Button>
+		<Button label="Button" />
+		<Button label="Button" />
 	</Join>
 </HighlightDisplay>
 <Highlight {code} />

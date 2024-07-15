@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Divider from '$lib/divider/divider.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';

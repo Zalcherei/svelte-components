@@ -1,5 +1,4 @@
-<script>
-	import Avatar from '$lib/avatar/avatar.svelte';
+<script lang="ts">
 	import ChatBubbleItem from '$lib/chat-bubble/chat-bubble-item.svelte';
 	import ChatBubble from '$lib/chat-bubble/chat-bubble.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';

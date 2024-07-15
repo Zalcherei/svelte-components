@@ -41,7 +41,7 @@
 									variant="text"
 									class="justify-between"
 									href="{base}/{child.href}"
-								></Button>
+								/>
 							{/each}
 						{/if}
 					{/each}

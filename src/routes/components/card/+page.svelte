@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Card from '$lib/card/card.svelte';
@@ -8,21 +8,21 @@
 	import CardHeader from '$lib/card/card-header.svelte';
 
 	let code = `<Card>
-    <CardHeader>Card</CardHeader>
-    <CardContent>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nisi ut ullam, dignissimos
-      reprehenderit eligendi natus at. Minus, eaque possimus!
-    </CardContent>
-    <CardFooter>
-      <Button>Accept</Button>
-      <Button>Decline</Button>
-    </CardFooter>
+  	<CardHeader>Card</CardHeader>
+  	<CardContent>
+  		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nisi ut ullam, dignissimos
+  		reprehenderit eligendi natus at. Minus, eaque possimus!
+  	</CardContent>
+  	<CardFooter>
+  		<Button label="Accept" variant="text" />
+  		<Button label="Decline" variant="text" />
+  	</CardFooter>
   </Card>
   <Card variant="shadow">
-    <CardContent>Card</CardContent>
+  	<CardContent>Card</CardContent>
   </Card>
   <Card variant="outlined">
-    <CardContent>Card</CardContent>
+  	<CardContent>Card</CardContent>
   </Card>`;
 </script>
 
@@ -40,8 +40,8 @@
 			reprehenderit eligendi natus at. Minus, eaque possimus!
 		</CardContent>
 		<CardFooter>
-			<Button>Accept</Button>
-			<Button>Decline</Button>
+			<Button label="Accept" variant="text" />
+			<Button label="Decline" variant="text" />
 		</CardFooter>
 	</Card>
 	<Card variant="shadow">

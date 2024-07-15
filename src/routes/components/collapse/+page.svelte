@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Collapse from '$lib/collapse/collapse.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';

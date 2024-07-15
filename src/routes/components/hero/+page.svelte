@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/button/button.svelte';
 	import Hero from '$lib/hero/hero.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';

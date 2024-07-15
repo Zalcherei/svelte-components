@@ -3,7 +3,6 @@
 	import Button from '$lib/button/button.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
-	import MenuItem from '$lib/menu/menu-item.svelte';
 	import Menu from '$lib/menu/menu.svelte';
 
 	let code = `<Menu>
@@ -22,10 +21,10 @@
 
 <HighlightDisplay class="flex-col">
 	<Menu variant="col">
-		<Button variant="text" href="{base}/">Item 1</Button>
-		<Button variant="text" href="{base}/">Item 2</Button>
-		<Button variant="text" href="{base}/">Item 3</Button>
-		<Button variant="text" href="{base}/">Item 4</Button>
+		<Button variant="text" label="Item 1" href="{base}/" />
+		<Button variant="text" label="Item 2" href="{base}/" />
+		<Button variant="text" label="Item 3" href="{base}/" />
+		<Button variant="text" label="Item 4" href="{base}/" />
 	</Menu>
 </HighlightDisplay>
 <Highlight {code} />

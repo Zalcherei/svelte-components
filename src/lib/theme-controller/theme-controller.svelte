@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import Button from '$lib/button/button.svelte';
-	import Moon from '$lib/icons/moon.svelte';
-	import Sun from '$lib/icons/sun.svelte';
+	import MoonIcon from '$lib/icons/moon.svelte';
+	import SunIcon from '$lib/icons/sun.svelte';
 
 	export let variant: string = '';
 	let darkMode: boolean = false;
@@ -31,10 +31,4 @@
 	}
 </script>
 
-<Button {variant} size="icon" on:click={handleAction}>
-	{#if darkMode}
-		<Moon />
-	{:else}
-		<Sun />
-	{/if}
-</Button>
+<Button {variant} size="icon" icon={darkMode ? MoonIcon : SunIcon} on:click={handleAction} />

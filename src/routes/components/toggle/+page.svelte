@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Toggle from '$lib/toggle/toggle.svelte';

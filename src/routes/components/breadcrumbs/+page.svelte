@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { base } from '$app/paths';
 	import Breadcrumbs from '$lib/breadcrumbs/breadcrumbs.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';

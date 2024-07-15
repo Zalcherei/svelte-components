@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Countdown from '$lib/countdown/countdown.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';

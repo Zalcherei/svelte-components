@@ -1,20 +1,13 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import Prism from 'prismjs';
-	import 'prismjs/themes/prism-okaidia.min.css';
-	import DOMPurify from 'dompurify';
+	import Code from '$lib/highlight/highlight-code.svelte';
+	import Display from '$lib/highlight/highlight-display.svelte';
+	import Header from '$lib/highlight/highlight-header.svelte';
+	import Options from '$lib/highlight/highlight-options.svelte';
 
-	let language: string = 'html';
-	let highlightedCode: string;
-	export let code: string = ``;
-
-	onMount(() => {
-		const rawHighlightedCode = Prism.highlight(code, Prism.languages[language], 'html');
-		highlightedCode = DOMPurify.sanitize(rawHighlightedCode);
-	});
+	let className: string = '';
+	export { className as class };
 </script>
 
-<pre
-	class="overflow-hidden rounded-b-md border-x bg-neutral-700 pb-2 pt-3 text-white dark:border-neutral-700">
-  {@html highlightedCode}
-</pre>
+<div class="mb-4 grid w-full grid-cols-[1fr_256px] rounded-md border border-gray-200 {className}">
+	<slot {Code} {Display} {Header} {Options}></slot>
+</div>

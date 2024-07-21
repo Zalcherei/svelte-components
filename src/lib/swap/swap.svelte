@@ -1,10 +1,10 @@
 <script lang="ts">
 	let className: string = '';
-	export { className as class };
 	let swap: boolean = false;
-	const handleAction = () => {
+	export { className as class };
+	function handleAction() {
 		swap = !swap;
-	};
+	}
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions (because of reasons) -->

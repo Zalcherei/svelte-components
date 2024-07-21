@@ -1,29 +1,38 @@
 <script lang="ts">
 	import Button from '$lib/button/button.svelte';
-	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Indicator from '$lib/indicator/indicator.svelte';
+	import GithubIcon from '$lib/icons/github.svelte';
 
-	let code = `<button
-    class="relative me-1 inline-flex h-10 min-w-10 items-center justify-center
-    rounded-md bg-white px-4 transition hover:bg-gray-100 dark:bg-neutral-800
-    dark:hover:bg-neutral-700"
-  >
-    Button
-    <Indicator />
-  </button>`;
+	let code = `<Button>
+  	Button
+  	<Indicator />
+  </Button>`;
 </script>
 
 <svelte:head>
 	<title>Svelte Components - Indicator</title>
 </svelte:head>
 
-<h3 clasS="text-3xl mb-4">Default Usage</h3>
+<h3 class="mb-4 text-3xl">Usage</h3>
 
-<HighlightDisplay>
-	<Button>
-		Button
-		<Indicator />
-	</Button>
-</HighlightDisplay>
-<Highlight {code} />
+<Highlight let:Header let:Display let:Options let:Code>
+	<Header>
+		Indicator
+		<Button
+			variant="text"
+			size="icon"
+			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/indicator"
+			target="_blank"
+			icon={GithubIcon}
+		/>
+	</Header>
+	<Display class="p-4">
+		<Button>
+			Button
+			<Indicator />
+		</Button>
+	</Display>
+	<Options></Options>
+	<Code {code} />
+</Highlight>

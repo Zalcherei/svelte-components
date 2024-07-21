@@ -1,24 +1,29 @@
 <script lang="ts">
-	import Square from '$lib/icons/square.svelte';
-	import SquareCheck from '$lib/icons/square-check.svelte';
+	import { createEventDispatcher } from 'svelte';
+	import SquareIcon from '$lib/icons/square.svelte';
+	import SquareCheckIcon from '$lib/icons/square-check.svelte';
 
 	let className: string = '';
-	let checked: boolean = false;
+	export let id: string | null | undefined = '';
+	export let checked: boolean = false;
 	export { className as class };
 
-	const handleClick = () => {
+	const dispatch = createEventDispatcher();
+
+	function handleAction() {
 		checked = !checked;
-	};
+		dispatch('click');
+	}
 </script>
 
-<button
-	class="inline-flex h-10 min-w-10 items-center gap-1 transition {className}"
-	on:click={handleClick}
->
+<label class="item-center flex cursor-pointer {className}">
+	<input type="checkbox" {id} {checked} class="sr-only" on:click={handleAction} />
 	{#if checked}
-		<SquareCheck />
+		<SquareCheckIcon />
 	{:else}
-		<Square />
+		<SquareIcon />
 	{/if}
-	<span><slot></slot></span>
-</button>
+	<span class="ms-2">
+		<slot></slot>
+	</span>
+</label>

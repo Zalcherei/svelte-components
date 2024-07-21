@@ -1,4 +1,7 @@
 <script lang="ts">
+	import Header from '$lib/card/card-header.svelte';
+	import Content from '$lib/card/card-content.svelte';
+	import Footer from '$lib/card/card-footer.svelte';
 	let className: string = '';
 	export let variant: string = '';
 	export { className as class };
@@ -13,5 +16,5 @@
 				? 'shadow'
 				: ''} {className}"
 >
-	<slot></slot>
+	<slot {Header} {Content} {Footer}></slot>
 </div>

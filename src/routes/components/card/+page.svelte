@@ -1,28 +1,25 @@
 <script lang="ts">
-	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import Card from '$lib/card/card.svelte';
 	import Button from '$lib/button/button.svelte';
-	import CardContent from '$lib/card/card-content.svelte';
-	import CardFooter from '$lib/card/card-footer.svelte';
-	import CardHeader from '$lib/card/card-header.svelte';
+	import GithubIcon from '$lib/icons/github.svelte';
 
-	let code = `<Card>
-  	<CardHeader>Card</CardHeader>
-  	<CardContent>
-  		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nisi ut ullam, dignissimos
-  		reprehenderit eligendi natus at. Minus, eaque possimus!
-  	</CardContent>
-  	<CardFooter>
+	let code = `<Card let:Header let:Content let:Footer>
+  	<Header>Card</Header>
+  	<Content>
+  		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nisi ut ullam,
+  		dignissimos reprehenderit eligendi natus at. Minus, eaque possimus!
+  	</Content>
+  	<Footer>
   		<Button label="Accept" variant="text" />
   		<Button label="Decline" variant="text" />
-  	</CardFooter>
+  	</Footer>
   </Card>
-  <Card variant="shadow">
-  	<CardContent>Card</CardContent>
+  <Card let:Content variant="shadow">
+  	<Content>Card</Content>
   </Card>
-  <Card variant="outlined">
-  	<CardContent>Card</CardContent>
+  <Card let:Content variant="outlined">
+  	<Content>Card</Content>
   </Card>`;
 </script>
 
@@ -30,25 +27,38 @@
 	<title>Svelte Components - Card</title>
 </svelte:head>
 
-<h3 clasS="text-3xl mb-4">Default Usage</h3>
+<h3 class="mb-4 text-3xl">Usage</h3>
 
-<HighlightDisplay class="flex-col">
-	<Card>
-		<CardHeader>Card</CardHeader>
-		<CardContent>
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nisi ut ullam, dignissimos
-			reprehenderit eligendi natus at. Minus, eaque possimus!
-		</CardContent>
-		<CardFooter>
-			<Button label="Accept" variant="text" />
-			<Button label="Decline" variant="text" />
-		</CardFooter>
-	</Card>
-	<Card variant="shadow">
-		<CardContent>Card</CardContent>
-	</Card>
-	<Card variant="outlined">
-		<CardContent>Card</CardContent>
-	</Card>
-</HighlightDisplay>
-<Highlight {code} />
+<Highlight let:Header let:Display let:Options let:Code>
+	<Header>
+		Card
+		<Button
+			variant="text"
+			size="icon"
+			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/card"
+			target="_blank"
+			icon={GithubIcon}
+		/>
+	</Header>
+	<Display class="p-4">
+		<Card let:Header let:Content let:Footer>
+			<Header>Card</Header>
+			<Content>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nisi ut ullam,
+				dignissimos reprehenderit eligendi natus at. Minus, eaque possimus!
+			</Content>
+			<Footer>
+				<Button label="Accept" variant="text" />
+				<Button label="Decline" variant="text" />
+			</Footer>
+		</Card>
+		<Card let:Content variant="shadow">
+			<Content>Card</Content>
+		</Card>
+		<Card let:Content variant="outlined">
+			<Content>Card</Content>
+		</Card>
+	</Display>
+	<Options></Options>
+	<Code {code} />
+</Highlight>

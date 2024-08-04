@@ -20,7 +20,7 @@
 		<a class="me-2 font-medium" href="{base}/">Svelte-Components</a>
 		<Button variant="text" size="icon" icon={MenuIcon} on:click={handleAction} />
 		<div class="flex-1"></div>
-		<Button label="Components" variant="text" href={base} />
+		<Button label="Components" variant="text" href="{base}/components" />
 		<Button
 			variant="text"
 			size="icon"

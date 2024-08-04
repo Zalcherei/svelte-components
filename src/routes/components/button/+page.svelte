@@ -29,7 +29,7 @@
 	<title>Svelte-Components - Button</title>
 </svelte:head>
 
-<h3 clasS="text-3xl mb-4">Usage</h3>
+<h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight let:Header let:Display let:Options let:Code>
 	<Header>

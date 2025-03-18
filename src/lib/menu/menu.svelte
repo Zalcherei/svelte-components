@@ -1,7 +1,5 @@
 <script lang="ts">
-	let className: string = '';
-	export let variant: string = '';
-	export { className as class };
+	let { children, class: className = '', variant = '' } = $props();
 </script>
 
 <ul
@@ -12,5 +10,5 @@
 			? 'flex-col'
 			: ''} {className}"
 >
-	<slot></slot>
+	{@render children?.()}
 </ul>

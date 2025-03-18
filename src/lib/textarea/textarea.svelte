@@ -1,8 +1,5 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
-	export let placeholder: string = '';
-	export let resize: string = '';
+	let { class: className = '', placeholder = '', resize = '' } = $props();
 </script>
 
 <textarea

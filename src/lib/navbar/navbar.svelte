@@ -1,7 +1,5 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
-	export let variant: string = '';
+	let { children, class: className = '', variant = '' } = $props();
 </script>
 
 <div
@@ -10,5 +8,5 @@
 		? '!border-0 !shadow'
 		: ''} {className}"
 >
-	<slot></slot>
+	{@render children?.()}
 </div>

@@ -2,14 +2,11 @@
 	import Button from '$lib/button/button.svelte';
 	import { slide } from 'svelte/transition';
 
-	let className: string = '';
-	export let variant: string = '';
-	export let title: string = '';
-	export { className as class };
-	let accordion: boolean = false;
-	const handleClick = () => {
+	let { children, class: className = '', variant = '', title = '' } = $props();
+	let accordion = $state(false);
+	function handleClick() {
 		accordion = !accordion;
-	};
+	}
 </script>
 
 <div
@@ -22,7 +19,7 @@
 				? 'shadow'
 				: ''} {className}"
 >
-	<Button class="w-full !justify-start !rounded-none" on:click={handleClick}>
+	<Button class="w-full !justify-start !rounded-none" onclick={handleClick}>
 		{title}
 	</Button>
 	{#if accordion}
@@ -30,7 +27,7 @@
 			class="p-4 {accordion ? 'border-t border-gray-200 dark:border-neutral-700' : ''}"
 			transition:slide
 		>
-			<slot></slot>
+			{@render children?.()}
 		</div>
 	{/if}
 </div>

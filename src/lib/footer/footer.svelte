@@ -1,7 +1,5 @@
 <script lang="ts">
-	let className: string = '';
-	export let variant: string = '';
-	export { className as class };
+	let { children, class: className = '', variant = '' } = $props();
 </script>
 
 <footer
@@ -14,5 +12,5 @@
 				? 'shadow'
 				: ''} {className}"
 >
-	<slot></slot>
+	{@render children?.()}
 </footer>

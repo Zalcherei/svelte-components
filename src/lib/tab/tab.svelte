@@ -21,5 +21,5 @@
 	class="me-0 rounded-none {isActive ? 'bg-gray-200 dark:bg-neutral-700' : ''} {className}"
 	{label}
 	variant="text"
-	on:click={handleClick}
+	onclick={handleClick}
 />

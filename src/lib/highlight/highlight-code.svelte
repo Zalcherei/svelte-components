@@ -14,9 +14,9 @@
 	});
 </script>
 
-<div class="col-span-2 border-t border-gray-200 p-2">
+<div class="col-span-2 border-t border-gray-200 p-2 dark:border-neutral-700">
 	<pre
-		class="overflow-hidden rounded-md border-x bg-neutral-800 pb-2 pt-3 text-white dark:border-neutral-700">
+		class="overflow-hidden rounded-md border-x bg-neutral-800 pt-3 pb-2 text-white dark:border-neutral-700">
   {@html highlightedCode}
 </pre>
 </div>

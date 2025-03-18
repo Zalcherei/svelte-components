@@ -1,7 +1,5 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
-	export let value: string = '';
+	let { class: className = '', value = '' } = $props();
 </script>
 
 <progress class="apperance-none h-3 overflow-hidden rounded-md {className}" {value} max="100"

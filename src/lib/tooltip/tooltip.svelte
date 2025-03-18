@@ -1,7 +1,5 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
-	export let align: string = '';
+	let { children, class: className = '', align = '' } = $props();
 </script>
 
 <div
@@ -16,5 +14,5 @@
 					? '-right-2 translate-x-full'
 					: ''} {className}"
 >
-	<slot></slot>
+	{@render children?.()}
 </div>

@@ -1,8 +1,5 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
-	export let progress: number = 0;
-	export let theme: string = '';
+	let { class: className = '', progress = 0, theme = '' } = $props();
 </script>
 
 <div

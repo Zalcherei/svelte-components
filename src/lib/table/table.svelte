@@ -1,8 +1,7 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
+	let { children, class: className = '' } = $props();
 </script>
 
 <table class="w-full overflow-hidden rounded-md {className}">
-	<slot></slot>
+	{@render children?.()}
 </table>

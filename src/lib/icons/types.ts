@@ -1,5 +1,5 @@
 import type { SVGAttributes, SvelteHTMLElements } from 'svelte/elements';
-
+import type { Snippet } from 'svelte';
 export type Attrs = SVGAttributes<SVGSVGElement>;
 export type IconNode = [elementName: keyof SvelteHTMLElements, attrs: Attrs][];
 export interface IconProps extends Attrs {
@@ -8,8 +8,8 @@ export interface IconProps extends Attrs {
 	size?: number | string;
 	strokeWidth?: number | string;
 	absoluteStrokeWidth?: boolean;
-	class?: string;
 	iconNode?: IconNode;
+	children?: Snippet;
 }
 export type IconEvents = {
 	[evt: string]: CustomEvent<any>;

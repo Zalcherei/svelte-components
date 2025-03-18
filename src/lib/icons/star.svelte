@@ -1,5 +1,6 @@
 <script>
 	import Icon from '$lib/icons/icon.svelte';
+	let props = $props();
 	const iconNode = [
 		[
 			'polygon',
@@ -11,6 +12,6 @@
 	];
 </script>
 
-<Icon name="star" {...$$props} {iconNode}>
-	<slot />
+<Icon name="star" {...props} {iconNode}>
+	{@render props.children?.()}
 </Icon>

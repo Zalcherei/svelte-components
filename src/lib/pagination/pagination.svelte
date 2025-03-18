@@ -3,10 +3,7 @@
 	import ChevronLeftIcon from '$lib/icons/chevron-left.svelte';
 	import ChevronRightIcon from '$lib/icons/chevron-right.svelte';
 
-	let className: string = '';
-	export { className as class };
-	export let variant: string = '';
-	export let controls: boolean = false;
+	let { children, class: className = '', variant = '', controls = false } = $props();
 </script>
 
 <nav
@@ -15,7 +12,7 @@
 	{#if controls}
 		<Button {variant} icon={ChevronLeftIcon} />
 	{/if}
-	<slot></slot>
+	{@render children?.()}
 
 	{#if controls}
 		<Button {variant} icon={ChevronRightIcon} />

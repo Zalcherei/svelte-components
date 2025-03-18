@@ -1,19 +1,17 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
-	export let direction: string = '';
+	let { children, class: className = '', direction = '' } = $props();
 </script>
 
 {#if direction === 'horizontal'}
 	<div
-		class="flex [&>*:first-child]:rounded-l-md [&>*:last-child]:rounded-r-md [&>*]:me-0 [&>*]:rounded-none {className}"
+		class="flex [&>*]:me-0 [&>*]:rounded-none [&>*:first-child]:rounded-l-md [&>*:last-child]:rounded-r-md {className}"
 	>
-		<slot></slot>
+		{@render children?.()}
 	</div>
 {:else if direction === 'vertical'}
 	<div
-		class="flex flex-col [&>*:first-child]:rounded-t-md [&>*:last-child]:rounded-b-md [&>*]:me-0 [&>*]:rounded-none {className}"
+		class="flex flex-col [&>*]:me-0 [&>*]:rounded-none [&>*:first-child]:rounded-t-md [&>*:last-child]:rounded-b-md {className}"
 	>
-		<slot></slot>
+		{@render children?.()}
 	</div>
 {/if}

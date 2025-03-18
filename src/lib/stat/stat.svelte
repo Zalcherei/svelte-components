@@ -1,9 +1,5 @@
 <script lang="ts">
-	let className: string = '';
-	export let title: string = '';
-	export let stat: string = '';
-	export let subtitle: string = '';
-	export { className as class };
+	let { class: className = '', title = '', stat = '', subtitle = '' } = $props();
 </script>
 
 <div class="rounded-md bg-white p-4 dark:bg-neutral-800 {className}">

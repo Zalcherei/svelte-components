@@ -1,20 +1,20 @@
 <script lang="ts">
 	import Avatar from '$lib/avatar/avatar.svelte';
 
-	export let alignment: string = '';
+	let { children, alignment = '' } = $props();
 </script>
 
 {#if alignment === 'start'}
 	<div class="flex w-full justify-start gap-2">
 		<Avatar size="md" alt="medium" src="https://picsum.photos/48/48" />
 		<div class="flex w-64 items-center rounded-md bg-white p-4 dark:bg-neutral-800">
-			<slot></slot>
+			{@render children?.()}
 		</div>
 	</div>
 {:else if alignment === 'end'}
 	<div class="flex w-full justify-end gap-2">
 		<div class="flex w-64 items-center rounded-md bg-white p-4 dark:bg-neutral-800">
-			<slot></slot>
+			{@render children?.()}
 		</div>
 		<Avatar size="md" alt="medium" src="https://picsum.photos/48/48" />
 	</div>

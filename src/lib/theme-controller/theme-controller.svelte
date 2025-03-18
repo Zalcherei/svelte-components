@@ -7,7 +7,7 @@
 	export let variant: string = '';
 	let darkMode: boolean = false;
 
-	const handleAction = () => {
+	function handleAction() {
 		darkMode = !darkMode;
 
 		localStorage.setItem('theme', darkMode ? 'dark' : 'light');
@@ -15,7 +15,7 @@
 		darkMode
 			? document.documentElement.classList.add('dark')
 			: document.documentElement.classList.remove('dark');
-	};
+	}
 
 	if (browser) {
 		if (
@@ -31,4 +31,4 @@
 	}
 </script>
 
-<Button {variant} size="icon" icon={darkMode ? MoonIcon : SunIcon} on:click={handleAction} />
+<Button {variant} size="icon" icon={darkMode ? MoonIcon : SunIcon} onclick={handleAction} />

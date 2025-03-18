@@ -1,7 +1,5 @@
 <script lang="ts">
-	let className: string = '';
-	export let id: string = '';
-	export { className as class };
+	let { children, class: className = '', id = '' } = $props();
 </script>
 
 <label for={id} class="relative flex cursor-pointer items-center {className}">
@@ -10,5 +8,7 @@
 	<div
 		class="absolute h-6 w-6 rounded-full bg-white shadow transition peer-checked:translate-x-full peer-checked:bg-gray-100 dark:bg-neutral-600 peer-checked:dark:bg-neutral-500"
 	></div>
-	<span class="ml-2"><slot></slot></span>
+	<span class="ml-2">
+		{@render children?.()}
+	</span>
 </label>

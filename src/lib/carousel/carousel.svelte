@@ -3,16 +3,15 @@
 	import ChevronLeftIcon from '$lib/icons/chevron-left.svelte';
 	import ChevronRightIcon from '$lib/icons/chevron-right.svelte';
 
-	let currentIndex: number = 0;
-	export let images: Array<string> = [];
+	let { currentIndex = 0, images = [] } = $props();
 
-	const showPrevImage = () => {
+	function showPrevImage() {
 		currentIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
-	};
+	}
 
-	const showNextImage = () => {
+	function showNextImage() {
 		currentIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
-	};
+	}
 </script>
 
 <div class="relative">
@@ -21,15 +20,15 @@
 	{/each}
 
 	<Button
-		class="!absolute left-0 top-[45%]"
+		class="!absolute top-[45%] left-0"
 		size="icon"
-		on:click={showPrevImage}
+		onclick={showPrevImage}
 		icon={ChevronLeftIcon}
 	/>
 	<Button
-		class="!absolute right-0 top-[45%]"
+		class="!absolute top-[45%] right-0"
 		size="icon"
-		on:click={showNextImage}
+		onclick={showNextImage}
 		icon={ChevronRightIcon}
 	/>
 </div>

@@ -1,8 +1,5 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
-	export let title: string = '';
-	export let description: string = '';
+	let { children, class: className = '', title = '', description = '' } = $props();
 </script>
 
 <div
@@ -12,5 +9,5 @@
 	<p class="w-3/4 p-4 text-center">
 		{description}
 	</p>
-	<slot></slot>
+	{@render children?.()}
 </div>

@@ -7,9 +7,9 @@
 	export let variant: string = '';
 	const rating = writable(0);
 
-	const setRating = (value: number) => {
+	function setRating(value: number) {
 		rating.set(value);
-	};
+	}
 </script>
 
 {#each Array(stars) as _, i}
@@ -17,7 +17,7 @@
 		{variant}
 		size="icon"
 		class="text-black hover:text-yellow-500 dark:text-white"
-		on:click={() => setRating(i + 1)}
+		onclick={() => setRating(i + 1)}
 	>
 		{#if $rating > i}
 			<Star class="text-yellow-500" />

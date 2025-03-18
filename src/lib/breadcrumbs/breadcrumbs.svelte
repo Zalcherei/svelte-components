@@ -1,12 +1,11 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
+	let { children, class: className = '' } = $props();
 </script>
 
 <div>
 	<ul
-		class="flex [&>*:last-child]:after:content-[''] [&>*]:me-2 [&>*]:after:content-['>'] {className}"
+		class="flex [&>*]:me-2 [&>*]:after:content-['>'] [&>*:last-child]:after:content-[''] {className}"
 	>
-		<slot></slot>
+		{@render children?.()}
 	</ul>
 </div>

@@ -1,8 +1,7 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
+	let { children, class: className = '' } = $props();
 </script>
 
 <ul class="mt-5 flex {className}">
-	<slot></slot>
+	{@render children?.()}
 </ul>

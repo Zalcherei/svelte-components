@@ -51,6 +51,6 @@
 			</Accordion>
 		</div>
 	</Display>
-	<Options></Options>
+	<Options />
 	<Code {code} />
 </Highlight>

@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-	let className: string = '';
-	export { className as class };
+	let { children, class: className = '' } = $props();
 </script>
 
 <aside
-	class="hidden w-64 flex-col border-r border-gray-200 bg-white dark:border-neutral-700 dark:bg-neutral-800 lg:flex [&>button]:justify-start {className}"
+	class="hidden w-64 flex-col border-r border-gray-200 bg-white lg:flex dark:border-neutral-700 dark:bg-neutral-800 [&>button]:justify-start {className}"
 	transition:slide={{ axis: 'x' }}
 >
-	<slot></slot>
+	{@render children?.()}
 </aside>

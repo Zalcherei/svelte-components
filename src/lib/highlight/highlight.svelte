@@ -8,6 +8,8 @@
 	export { className as class };
 </script>
 
-<div class="mb-4 grid w-full grid-cols-[1fr_256px] rounded-md border border-gray-200 {className}">
+<div
+	class="mb-4 grid w-full grid-cols-[1fr_256px] overflow-hidden rounded-md border border-gray-200 dark:border-neutral-700 {className}"
+>
 	<slot {Code} {Display} {Header} {Options}></slot>
 </div>

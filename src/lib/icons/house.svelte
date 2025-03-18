@@ -1,5 +1,6 @@
 <script>
 	import Icon from '$lib/icons/icon.svelte';
+	let props = $props();
 	const iconNode = [
 		['path', { d: 'M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8' }],
 		[
@@ -11,6 +12,6 @@
 	];
 </script>
 
-<Icon name="house" {...$$props} {iconNode}>
-	<slot />
+<Icon name="house" {...props} {iconNode}>
+	{@render props.children?.()}
 </Icon>

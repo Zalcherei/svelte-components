@@ -1,8 +1,7 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
+	let { children, class: className = '' } = $props();
 </script>
 
 <div class="[&>:nth-child(2)]:-translate-y-1/2 [&>:nth-child(3)]:-translate-y-full {className}">
-	<slot></slot>
+	{@render children?.()}
 </div>

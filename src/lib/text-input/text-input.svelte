@@ -1,7 +1,5 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
-	export let placeholder: string = '';
+	let { class: className = '', placeholder = '' } = $props();
 </script>
 
 <input

@@ -1,9 +1,5 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
-	export let mask: string = '';
-	export let alt: string = '';
-	export let src: string = '';
+	let { class: className = '', mask = '', alt = '', src = '' } = $props();
 </script>
 
 <img

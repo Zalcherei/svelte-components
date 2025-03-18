@@ -1,8 +1,5 @@
 <script lang="ts">
-	let className: string = '';
-	export let width: string = '0';
-	export let height: string = '0';
-	export { className as class };
+	let { class: className = '', width = '0', height = '0' } = $props();
 </script>
 
 <div

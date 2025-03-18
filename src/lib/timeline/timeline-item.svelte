@@ -1,9 +1,7 @@
 <script lang="ts">
 	import Check from '$lib/icons/check.svelte';
 
-	export let date: string = '';
-	export let title: string = '';
-	export let last: boolean = false;
+	let { date = '', title = '', last = false } = $props();
 </script>
 
 <li class="relative flex min-w-32 flex-col items-center">

@@ -8,17 +8,18 @@
 	import GithubIcon from '$lib/icons/github.svelte';
 	import MenuIcon from '$lib/icons/menu.svelte';
 
-	let drawer = false;
+	let { children } = $props();
+	let drawer = $state(false);
 
-	const handleAction = () => {
+	function handleAction() {
 		drawer = !drawer;
-	};
+	}
 </script>
 
 <div class="flex min-h-screen flex-col">
 	<Navbar>
 		<a class="me-2 font-medium" href="{base}/">Svelte-Components</a>
-		<Button variant="text" size="icon" icon={MenuIcon} on:click={handleAction} />
+		<Button variant="text" size="icon" icon={MenuIcon} onclick={handleAction} />
 		<div class="flex-1"></div>
 		<Button label="Components" variant="text" href="{base}/components" />
 		<Button
@@ -49,7 +50,7 @@
 			</Drawer>
 		{/if}
 		<main class="flex-1 overflow-y-auto">
-			<slot></slot>
+			{@render children?.()}
 		</main>
 	</section>
 </div>

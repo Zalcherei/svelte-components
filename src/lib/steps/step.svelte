@@ -1,8 +1,5 @@
 <script lang="ts">
-	export let title: string = '';
-	export let id: string | number;
-	export let complete: boolean = false;
-	export let last: boolean = false;
+	let { title = '', id = '', complete = false, last = false } = $props();
 </script>
 
 <li class="relative flex min-w-32 flex-col items-center">

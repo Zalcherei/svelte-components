@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Avatar from '$lib/avatar/avatar.svelte';
+	import type { ChatBubbleItemProps } from '$lib/chat-bubble/types';
 
-	let { children, alignment = '' } = $props();
+	let { children, alignment }: ChatBubbleItemProps = $props();
 </script>
 
 {#if alignment === 'start'}

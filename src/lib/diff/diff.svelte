@@ -2,9 +2,9 @@
 	import ChevronLeft from '$lib/icons/chevron-left.svelte';
 	import ChevronRight from '$lib/icons/chevron-right.svelte';
 	import { onMount } from 'svelte';
+	import type { DiffProps } from '$lib/diff/types';
 
-	export let compare: string = '';
-	export let compared: string = '';
+	let { compare, compared }: DiffProps = $props();
 
 	onMount(() => {
 		// set vars
@@ -29,19 +29,19 @@
 >
 	<!-- Upper Image -->
 	<div
-		class="image background-image absolute left-0 top-0 h-full w-full bg-cover bg-center blur-sm grayscale"
+		class="image background-image absolute top-0 left-0 h-full w-full bg-cover bg-center blur-sm grayscale"
 		style="background: url('{compare}')"
 	></div>
 	<!-- Lower Image -->
 	<div
-		class="image foreground-image absolute left-0 top-0 h-full w-1/2 bg-cover bg-center saturate-150"
+		class="image foreground-image absolute top-0 left-0 h-full w-1/2 bg-cover bg-center saturate-150"
 		style="background: url('{compared}')"
 	></div>
 
 	<!-- Range Input -->
 	<input
 		id="range-slider"
-		class="range-slider absolute z-10 m-0 flex h-full w-full appearance-none items-center justify-center bg-gray-200 bg-opacity-20 outline-none"
+		class="range-slider bg-opacity-20 absolute z-10 m-0 flex h-full w-full appearance-none items-center justify-center bg-gray-200 outline-none"
 		name="slider"
 		type="range"
 		min="1"
@@ -51,7 +51,7 @@
 
 	<!-- Slider Control -->
 	<div
-		class="slider-control relative left-1/2 top-1/2 flex h-12 w-12 -translate-x-[60%] -translate-y-[60%] cursor-ew-resize items-center justify-center rounded-full bg-white"
+		class="slider-control relative top-1/2 left-1/2 flex h-12 w-12 -translate-x-[60%] -translate-y-[60%] cursor-ew-resize items-center justify-center rounded-full bg-white"
 	>
 		<ChevronLeft />
 		<ChevronRight />

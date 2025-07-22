@@ -31,4 +31,10 @@
 	}
 </script>
 
-<Button {variant} size="icon" icon={darkMode ? MoonIcon : SunIcon} onclick={handleAction} />
+<Button {variant} size="icon" onclick={handleAction}>
+	{#if darkMode}
+		<MoonIcon />
+	{:else}
+		<SunIcon />
+	{/if}
+</Button>

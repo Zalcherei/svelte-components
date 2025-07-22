@@ -3,10 +3,9 @@
 	import Prism from 'prismjs';
 	import 'prismjs/themes/prism-okaidia.min.css';
 	import DOMPurify from 'dompurify';
+	import type { HighlightCodeProps } from '$lib/highlight/types';
 
-	let language: string = 'html';
-	let highlightedCode: string;
-	export let code: string = ``;
+	let { language = 'html', highlightedCode, code = '' }: HighlightCodeProps = $props();
 
 	onMount(() => {
 		const rawHighlightedCode = Prism.highlight(code, Prism.languages[language], 'html');

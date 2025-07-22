@@ -1,8 +1,10 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
+	import { cn } from '$lib/utils';
+	import type { CardContentProps } from '$lib/card/types';
+
+	const { children, class: className }: CardContentProps = $props();
 </script>
 
-<div class="p-4 {className}">
-	<slot></slot>
+<div class={cn('p-4', className)}>
+	{@render children?.()}
 </div>

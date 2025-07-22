@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Check from '$lib/icons/check.svelte';
+	import type { TimelineItemProps } from '$lib/timeline/types';
 
-	let { date = '', title = '', last = false } = $props();
+	let { date, title, last = false }: TimelineItemProps = $props();
 </script>
 
 <li class="relative flex min-w-32 flex-col items-center">

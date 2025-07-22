@@ -1,7 +1,10 @@
 <script lang="ts">
-	let { children, class: className = '' } = $props();
+	import { cn } from '$lib/utils';
+	import type { TableRowProps } from '$lib/table/types';
+
+	let { children, class: className }: TableRowProps = $props();
 </script>
 
-<tr class="h-10 {className}">
+<tr class={cn('h-10', className)}>
 	{@render children?.()}
 </tr>

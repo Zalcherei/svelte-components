@@ -2,8 +2,9 @@
 	import Button from '$lib/button/button.svelte';
 	import ChevronLeftIcon from '$lib/icons/chevron-left.svelte';
 	import ChevronRightIcon from '$lib/icons/chevron-right.svelte';
+	import type { CarouselProps } from './types';
 
-	let { currentIndex = 0, images = [] } = $props();
+	let { currentIndex = 0, images = [] }: CarouselProps = $props();
 
 	function showPrevImage() {
 		currentIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
@@ -19,16 +20,10 @@
 		<img class="rounded-md {currentIndex === index ? 'block' : 'hidden'}" alt="..." src={image} />
 	{/each}
 
-	<Button
-		class="!absolute top-[45%] left-0"
-		size="icon"
-		onclick={showPrevImage}
-		icon={ChevronLeftIcon}
-	/>
-	<Button
-		class="!absolute top-[45%] right-0"
-		size="icon"
-		onclick={showNextImage}
-		icon={ChevronRightIcon}
-	/>
+	<Button class="!absolute top-[45%] left-0" size="icon" onclick={showPrevImage}>
+		<ChevronLeftIcon />
+	</Button>
+	<Button class="!absolute top-[45%] right-0" size="icon" onclick={showNextImage}>
+		<ChevronRightIcon />
+	</Button>
 </div>

@@ -1,13 +1,20 @@
 <script lang="ts">
-	let { class: className = '', mask = '', alt = '', src = '' } = $props();
+	import type { MaskProps } from '$lib/mask/types';
+	import { cn } from '$lib/utils';
+
+	let { class: className, mask, alt, src }: MaskProps = $props();
 </script>
 
 <img
-	class="{mask === 'heart'
-		? 'mask-heart bg-[center/contain] bg-no-repeat'
-		: mask === 'triangle'
-			? 'mask-triangle  bg-[center/contain] bg-no-repeat'
-			: ''} rounded-md {className}"
+	class={cn(
+		'rounded-md',
+		mask === 'heart'
+			? 'mask-heart bg-[center/contain] bg-no-repeat'
+			: mask === 'triangle'
+				? 'mask-triangle  bg-[center/contain] bg-no-repeat'
+				: '',
+		className
+	)}
 	{alt}
 	{src}
 />

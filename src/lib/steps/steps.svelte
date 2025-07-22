@@ -1,5 +1,7 @@
 <script lang="ts">
-	let { children, class: className = '' } = $props();
+	import type { StepsProps } from '$lib/steps/types';
+
+	let { children, class: className }: StepsProps = $props();
 </script>
 
 <ul class="flex {className}">

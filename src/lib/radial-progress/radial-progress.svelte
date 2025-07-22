@@ -1,9 +1,12 @@
 <script lang="ts">
-	let { class: className = '', progress = 0, theme = '' } = $props();
+	import { cn } from '$lib/utils';
+	import type { RadialProgressProps } from '$lib/radial-progress/types';
+
+	let { class: className, progress = 0, theme }: RadialProgressProps = $props();
 </script>
 
 <div
-	class="flex h-16 w-16 items-center justify-center rounded-full {className}"
+	class={cn('flex h-16 w-16 items-center justify-center rounded-full', className)}
 	style={theme === 'dark'
 		? `background: radial-gradient(closest-side, rgb(38 38 38) 79%, transparent 80% 100%), conic-gradient(rgb(64 64 64) ${progress}%, rgb(82 82 82) 0)`
 		: theme === 'light'

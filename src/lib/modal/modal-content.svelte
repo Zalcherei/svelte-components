@@ -1,8 +1,10 @@
 <script lang="ts">
-	let className: string = '';
-	export { className as class };
+	import { cn } from '$lib/utils';
+	import type { ModalContentProps } from '$lib/modal/types';
+
+	let { children, class: className }: ModalContentProps = $props();
 </script>
 
-<div class="p-4 {className}">
-	<slot></slot>
+<div class={cn('p-4', className)}>
+	{@render children?.()}
 </div>

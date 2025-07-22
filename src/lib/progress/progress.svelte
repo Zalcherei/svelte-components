@@ -1,8 +1,11 @@
 <script lang="ts">
-	let { class: className = '', value = '' } = $props();
+	import { cn } from '$lib/utils';
+	import type { ProgressProps } from '$lib/progress/types';
+
+	let { class: className, value }: ProgressProps = $props();
 </script>
 
-<progress class="apperance-none h-3 overflow-hidden rounded-md {className}" {value} max="100"
+<progress class={cn('apperance-none h-3 overflow-hidden rounded-md', className)} {value} max="100"
 ></progress>
 
 <style>

@@ -1,5 +1,7 @@
 <script lang="ts">
-	let { title = '', id = '', complete = false, last = false } = $props();
+	import type { StepProps } from '$lib/steps/types';
+
+	let { title, id, complete = false, last = false }: StepProps = $props();
 </script>
 
 <li class="relative flex min-w-32 flex-col items-center">

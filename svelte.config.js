@@ -16,7 +16,10 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/svelte-components' : process.env.BASE_PATH
+			base:
+				process.env.NODE_ENV === 'production'
+					? '/svelte-components'
+					: process.env.BASE_PATH || '/svelte-components'
 		}
 	}
 };

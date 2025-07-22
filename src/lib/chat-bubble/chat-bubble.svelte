@@ -1,7 +1,10 @@
 <script lang="ts">
-	let { children, class: className = '' } = $props();
+	import { cn } from '$lib/utils';
+	import type { ChatBubbleProps } from '$lib/chat-bubble/types';
+
+	let { children, class: className }: ChatBubbleProps = $props();
 </script>
 
-<div class="flex w-full flex-col {className}">
+<div class={cn('flex w-full flex-col', className)}>
 	{@render children?.()}
 </div>

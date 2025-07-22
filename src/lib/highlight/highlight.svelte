@@ -1,15 +1,15 @@
 <script lang="ts">
-	import Code from '$lib/highlight/highlight-code.svelte';
-	import Display from '$lib/highlight/highlight-display.svelte';
-	import Header from '$lib/highlight/highlight-header.svelte';
-	import Options from '$lib/highlight/highlight-options.svelte';
+	import type { HighlightProps } from '$lib/highlight/types';
+	import { cn } from '$lib/utils';
 
-	let className: string = '';
-	export { className as class };
+	const { children, class: className }: HighlightProps = $props();
 </script>
 
 <div
-	class="mb-4 grid w-full grid-cols-[1fr_256px] overflow-hidden rounded-md border border-gray-200 dark:border-neutral-700 {className}"
+	class={cn(
+		'mb-4 flex w-full flex-col overflow-hidden rounded-md border border-gray-200 dark:border-neutral-700',
+		className
+	)}
 >
-	<slot {Code} {Display} {Header} {Options}></slot>
+	{@render children?.()}
 </div>

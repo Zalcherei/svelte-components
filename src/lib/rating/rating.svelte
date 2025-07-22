@@ -2,9 +2,9 @@
 	import Button from '$lib/button/button.svelte';
 	import Star from '$lib/icons/star.svelte';
 	import { writable } from 'svelte/store';
+	import type { RatingProps } from '$lib/rating/types';
 
-	export let stars: number = 0;
-	export let variant: string = '';
+	let { stars = 0, variant }: RatingProps = $props();
 	const rating = writable(0);
 
 	function setRating(value: number) {

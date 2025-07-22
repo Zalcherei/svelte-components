@@ -1,0 +1,10 @@
+import"../chunks/Bzak7iHL.js";import"../chunks/CeYaOX8l.js";import{b as e,h as U,s as a,f as r,a as t,$ as Z,i as N,t as P,n as c}from"../chunks/D-EIk0JG.js";import{B as p,b as B}from"../chunks/D5WgC83u.js";import{b as C}from"../chunks/CXSsey1M.js";import{H as j,a as q,b as A,c as D}from"../chunks/BPrxgYj8.js";import{N as S}from"../chunks/B_XNmNOL.js";import{G as E}from"../chunks/BQbZeLVQ.js";var F=e('<meta name="description" content="Svelte-Components"/>'),I=e("Navbar <!>",1),J=e('<a class="font-medium">Svelte-Components</a> <div class="flex-1"></div> <!>',1),K=e('<a class="font-medium">Svelte-Components</a> <div class="flex-1"></div> <!>',1),M=e("<!> <!>",1),O=e("<!> <!> <!>",1),Q=e('<h3 class="mb-4 text-3xl">Usage</h3> <!>',1);function et(H){let L=`<Navbar>
+    <a class="font-medium" href="/">Svelte-Components</a>
+    <div class="flex-1"></div>
+    <Button variant="text">Learn</Button>
+  </Navbar>
+  <Navbar variant="shadow">
+    <a class="font-medium" href="/">Svelte-Components</a>
+    <div class="flex-1"></div>
+    <Button variant="text">Learn</Button>
+  </Navbar>`;var u=Q();U(v=>{var _=F();Z.title="Svelte-Components - Navbar",t(v,_)});var w=a(r(u),2);j(w,{children:(v,_)=>{var b=O(),g=r(b);q(g,{children:(d,k)=>{c();var o=I(),l=a(r(o));p(l,{variant:"text",size:"icon",href:"https://github.com/Zalcherei/svelte-components/tree/main/src/lib/navbar",target:"_blank",children:(m,i)=>{E(m,{})},$$slots:{default:!0}}),t(d,o)},$$slots:{default:!0}});var x=a(g,2);A(x,{class:"p-4",children:(d,k)=>{var o=M(),l=r(o);S(l,{children:(i,y)=>{var s=J(),n=r(s),f=a(n,4);p(f,{variant:"text",children:($,z)=>{c();var h=N("Learn");t($,h)},$$slots:{default:!0}}),P(()=>B(n,"href",C)),t(i,s)},$$slots:{default:!0}});var m=a(l,2);S(m,{variant:"shadow",children:(i,y)=>{var s=K(),n=r(s),f=a(n,4);p(f,{variant:"text",children:($,z)=>{c();var h=N("Learn");t($,h)},$$slots:{default:!0}}),P(()=>B(n,"href",C)),t(i,s)},$$slots:{default:!0}}),t(d,o)},$$slots:{default:!0}});var G=a(x,2);D(G,{code:L}),t(v,b)},$$slots:{default:!0}}),t(H,u)}export{et as component};

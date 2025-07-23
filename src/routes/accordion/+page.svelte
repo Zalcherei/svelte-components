@@ -5,7 +5,7 @@
 	import GithubIcon from '$lib/icons/github.svelte';
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
-	import HighlightHeader from '$lib/highlight/highlight-header.svelte';
+	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 	import AccordionTrigger from '$lib/accordion/accordion-trigger.svelte';
 	import AccordionContent from '$lib/accordion/accordion-content.svelte';
 
@@ -31,17 +31,15 @@
 <h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight>
-	<HighlightHeader>
+	<HighlightTitle>
 		Accordion
 		<Button
-			variant="text"
-			size="icon"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/accordion"
 			target="_blank"
 		>
 			<GithubIcon />
 		</Button>
-	</HighlightHeader>
+	</HighlightTitle>
 	<HighlightDisplay>
 		<Accordion>
 			<AccordionTrigger>Accordion Item #1</AccordionTrigger>

@@ -3,7 +3,7 @@
 	import Drawer from '$lib/drawer/drawer.svelte';
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
-	import HighlightHeader from '$lib/highlight/highlight-header.svelte';
+	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import GithubIcon from '$lib/icons/github.svelte';
 
@@ -23,23 +23,21 @@
 <h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight>
-	<HighlightHeader>
+	<HighlightTitle>
 		Drawer
 		<Button
-			variant="text"
-			size="icon"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/drawer"
 			target="_blank"
 		>
 			<GithubIcon />
 		</Button>
-	</HighlightHeader>
-	<HighlightDisplay class="p-4">
+	</HighlightTitle>
+	<HighlightDisplay>
 		<Drawer class="max-h-48">
-			<Button variant="text">Item #1</Button>
-			<Button variant="text">Item #2</Button>
-			<Button variant="text">Item #3</Button>
-			<Button variant="text">Item #4</Button>
+			<Button>Item #1</Button>
+			<Button>Item #2</Button>
+			<Button>Item #3</Button>
+			<Button>Item #4</Button>
 		</Drawer>
 	</HighlightDisplay>
 	<HighlightCode {code} />

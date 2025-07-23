@@ -5,7 +5,7 @@
 	import Carousel from '$lib/carousel/carousel.svelte';
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
-	import HighlightHeader from '$lib/highlight/highlight-header.svelte';
+	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 
 	let images = [
 		'https://picsum.photos/800/300?1',
@@ -26,18 +26,16 @@
 <h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight>
-	<HighlightHeader>
+	<HighlightTitle>
 		Carousel
 		<Button
-			variant="text"
-			size="icon"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/carousel"
 			target="_blank"
 		>
 			<GithubIcon />
 		</Button>
-	</HighlightHeader>
-	<HighlightDisplay class="p-4">
+	</HighlightTitle>
+	<HighlightDisplay>
 		<Carousel {images} />
 	</HighlightDisplay>
 	<HighlightCode {code} />

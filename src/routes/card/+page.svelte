@@ -5,7 +5,7 @@
 	import GithubIcon from '$lib/icons/github.svelte';
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
-	import HighlightHeader from '$lib/highlight/highlight-header.svelte';
+	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 	import CardContent from '$lib/card/card-content.svelte';
 	import CardFooter from '$lib/card/card-footer.svelte';
 	import CardHeader from '$lib/card/card-header.svelte';
@@ -37,18 +37,16 @@
 <h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight>
-	<HighlightHeader>
+	<HighlightTitle>
 		Card
 		<Button
-			variant="text"
-			size="icon"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/card"
 			target="_blank"
 		>
 			<GithubIcon />
 		</Button>
-	</HighlightHeader>
-	<HighlightDisplay class="p-4">
+	</HighlightTitle>
+	<HighlightDisplay>
 		<Card>
 			<CardHeader>Card</CardHeader>
 			<CardContent>
@@ -56,8 +54,8 @@
 				dignissimos reprehenderit eligendi natus at. Minus, eaque possimus!
 			</CardContent>
 			<CardFooter>
-				<Button variant="text">Accept</Button>
-				<Button variant="text">Decline</Button>
+				<Button>Accept</Button>
+				<Button>Decline</Button>
 			</CardFooter>
 		</Card>
 		<Card variant="shadow">

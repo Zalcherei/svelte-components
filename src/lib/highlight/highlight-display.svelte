@@ -5,6 +5,6 @@
 	const { children, class: className }: HighlightDisplayProps = $props();
 </script>
 
-<div class={cn('flex min-h-64 flex-col items-center justify-center', className)}>
+<div class={cn('flex min-h-64 flex-col items-center justify-center p-4', className)}>
 	{@render children?.()}
 </div>

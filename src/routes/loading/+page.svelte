@@ -5,7 +5,7 @@
 	import GithubIcon from '$lib/icons/github.svelte';
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
-	import HighlightHeader from '$lib/highlight/highlight-header.svelte';
+	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 
 	let code = `<Loading />`;
 </script>
@@ -18,18 +18,16 @@
 <h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight>
-	<HighlightHeader>
+	<HighlightTitle>
 		Loading
 		<Button
-			variant="text"
-			size="icon"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/loading"
 			target="_blank"
 		>
 			<GithubIcon />
 		</Button>
-	</HighlightHeader>
-	<HighlightDisplay class="p-4">
+	</HighlightTitle>
+	<HighlightDisplay>
 		<Loading />
 	</HighlightDisplay>
 	<HighlightCode {code} />

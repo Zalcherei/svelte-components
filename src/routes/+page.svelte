@@ -1,6 +1,6 @@
 <script>
 	import { base } from '$app/paths';
-	import { navigationUtils } from '$lib/navigationUtils';
+	import { navigation } from '$lib/navigation';
 	import Button from '$lib/button/button.svelte';
 </script>
 
@@ -9,12 +9,12 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-{#each navigationUtils as item}
+{#each navigation as item}
 	<h3 class="my-4 text-3xl">{item.name}</h3>
 	{#if item.children}
 		<div class="grid grid-cols-5 gap-2">
 			{#each item.children as child}
-				<Button variant="text" aria-label={child.name} href="{base}/{child.href}">
+				<Button aria-label={child.name} href="{base}/{child.href}">
 					{child.name}
 				</Button>
 			{/each}

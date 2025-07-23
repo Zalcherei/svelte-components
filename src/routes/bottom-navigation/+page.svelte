@@ -9,27 +9,18 @@
 	import GithubIcon from '$lib/icons/github.svelte';
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
-	import HighlightHeader from '$lib/highlight/highlight-header.svelte';
+	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 
 	let code = `<BottomNavigation class="!relative border-b-0">
-  	<Button
-  		class="flex h-16 w-full items-center justify-center"
-  		variant="text"
-  		href={base}
-  		icon={HomeIcon}
-  	/>
-  	<Button
-  		class="flex h-16 w-full items-center justify-center"
-  		variant="text"
-  		href={base}
-  		icon={HelpCircleIcon}
-  	/>
-  	<Button
-  		class="flex h-16 w-full items-center justify-center"
-  		variant="text"
-  		href={base}
-  		icon={BarChartIcon}
-  	/>
+    <Button class="flex h-16 w-full items-center justify-center" href={base}>
+   	  <HomeIcon />
+    </Button>
+    <Button class="flex h-16 w-full items-center justify-center" href={base}>
+   	  <HelpCircleIcon />
+    </Button>
+    <Button class="flex h-16 w-full items-center justify-center" href={base}>
+   	  <BarChartIcon />
+    </Button>
   </BottomNavigation>`;
 </script>
 
@@ -41,26 +32,24 @@
 <h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight>
-	<HighlightHeader>
+	<HighlightTitle>
 		Bottom Navigation
 		<Button
-			variant="text"
-			size="icon"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/bottom-navigation"
 			target="_blank"
 		>
 			<GithubIcon />
 		</Button>
-	</HighlightHeader>
-	<HighlightDisplay class="p-4">
+	</HighlightTitle>
+	<HighlightDisplay>
 		<BottomNavigation class="!relative border-b-0">
-			<Button class="flex h-16 w-full items-center justify-center" variant="text" href={base}>
+			<Button class="flex h-16 w-full items-center justify-center" href={base}>
 				<HomeIcon />
 			</Button>
-			<Button class="flex h-16 w-full items-center justify-center" variant="text" href={base}>
+			<Button class="flex h-16 w-full items-center justify-center" href={base}>
 				<HelpCircleIcon />
 			</Button>
-			<Button class="flex h-16 w-full items-center justify-center" variant="text" href={base}>
+			<Button class="flex h-16 w-full items-center justify-center" href={base}>
 				<BarChartIcon />
 			</Button>
 		</BottomNavigation>

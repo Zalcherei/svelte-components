@@ -2,13 +2,16 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
-body {
-	transition:
-		background-color 0.2s ease-in-out,
-		color 0.2s ease-in-out;
-	@apply bg-white text-black dark:bg-neutral-900 dark:text-white;
-}
+/* @custom-variant dark (&:is(.dark *)); */
 
-.svelte-icon {
-	@apply h-5 w-5;
+@layer base {
+	body {
+		transition:
+			background-color 0.2s ease-in-out,
+			color 0.2s ease-in-out;
+		@apply bg-white text-black dark:bg-neutral-900 dark:text-white;
+	}
+	.svelte-icon {
+		@apply h-5 w-5;
+	}
 }

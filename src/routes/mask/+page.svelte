@@ -5,7 +5,7 @@
 	import GithubIcon from '$lib/icons/github.svelte';
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
-	import HighlightHeader from '$lib/highlight/highlight-header.svelte';
+	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 
 	let code = `<Mask mask="heart" alt="..." src="https://picsum.photos/id/800/150/75" />
   <Mask mask="triangle" alt="..." src="https://picsum.photos/id/800/150/150" />`;
@@ -19,18 +19,16 @@
 <h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight>
-	<HighlightHeader>
+	<HighlightTitle>
 		Mask
 		<Button
-			variant="text"
-			size="icon"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/mask"
 			target="_blank"
 		>
 			<GithubIcon />
 		</Button>
-	</HighlightHeader>
-	<HighlightDisplay class="p-4">
+	</HighlightTitle>
+	<HighlightDisplay>
 		<Mask mask="heart" alt="..." src="https://picsum.photos/id/800/150/100" />
 		<Mask mask="triangle" alt="..." src="https://picsum.photos/id/800/150/150" />
 	</HighlightDisplay>

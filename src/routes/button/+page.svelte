@@ -2,16 +2,11 @@
 	import Button from '$lib/button/button.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import GithubIcon from '$lib/icons/github.svelte';
-	import HighlightHeader from '$lib/highlight/highlight-header.svelte';
+	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 
-	let code = `<Button variant="outlined" label="Button" />
-  <Button variant="text" label="Button" />
-  <Button label="Button" />
-  <Button label="Button" prepend={true} icon={Home} class="gap-2" />
-  <Button label="Button" append={true} icon={Home} class="gap-2" />
-  <Button size="icon" icon={Home} />`;
+	let code = `<Button>Button</Button>`;
 </script>
 
 <svelte:head>
@@ -22,17 +17,15 @@
 <h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight>
-	<HighlightHeader>
+	<HighlightTitle>
 		Button
 		<Button
-			variant="text"
-			size="icon"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/button"
 			target="_blank"
 		>
 			<GithubIcon />
 		</Button>
-	</HighlightHeader>
+	</HighlightTitle>
 	<HighlightDisplay>
 		<Button>Button</Button>
 	</HighlightDisplay>

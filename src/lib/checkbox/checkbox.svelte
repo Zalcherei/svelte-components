@@ -4,22 +4,18 @@
 	import { cn } from '$lib/utils';
 	import type { CheckboxProps } from '$lib/checkbox/types';
 
-	let { children, class: className, id }: CheckboxProps = $props();
-	let checked = $state(false);
+	let { checked = $bindable(false), class: className, id, ...restProps }: CheckboxProps = $props();
 
-	function handleAction() {
-		checked = !checked;
-	}
+	$effect(() => {
+		checked = checked;
+	});
 </script>
 
-<label class={cn('item-center flex cursor-pointer', className)}>
-	<input type="checkbox" {id} {checked} class="sr-only" onclick={handleAction} />
+<label {...restProps}>
+	<input type="checkbox" class={cn('sr-only', className)} bind:checked {...restProps} />
 	{#if checked}
 		<SquareCheckIcon />
 	{:else}
 		<SquareIcon />
 	{/if}
-	<span class="ms-2">
-		{@render children?.()}
-	</span>
 </label>

@@ -4,11 +4,10 @@
 
 	let {
 		children,
-		size,
 		href,
-		variant,
 		type = 'button',
 		tag = 'button',
+		disabled,
 		class: className,
 		...restProps
 	}: ButtonProps = $props();
@@ -19,13 +18,7 @@
 		role="button"
 		{href}
 		class={cn(
-			'relative grid grid-flow-col bg-white shadow transition hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700',
-			size === 'icon' ? 'rounded-full p-2.5' : 'rounded-md px-4 py-2',
-			variant === 'outlined'
-				? 'border border-gray-200 shadow-none dark:border-neutral-700'
-				: variant === 'text'
-					? 'shadow-none'
-					: '',
+			'relative inline-flex items-center justify-center rounded-md bg-white px-4 py-2 transition-colors hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700',
 			className
 		)}
 		{...restProps}
@@ -36,15 +29,10 @@
 	<button
 		{type}
 		class={cn(
-			'relative grid grid-flow-col bg-white shadow transition hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700',
-			size === 'icon' ? 'rounded-full p-2.5' : 'rounded-md px-4 py-2',
-			variant === 'outlined'
-				? 'border border-gray-200 shadow-none dark:border-neutral-700'
-				: variant === 'text'
-					? 'shadow-none'
-					: '',
+			'relative inline-flex items-center justify-center rounded-md bg-white px-4 py-2 transition-colors hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700',
 			className
 		)}
+		{disabled}
 		{...restProps}
 	>
 		{@render children?.()}

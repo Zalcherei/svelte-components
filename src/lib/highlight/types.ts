@@ -16,7 +16,7 @@ export interface HighlightDisplayProps {
 	class?: string;
 }
 
-export interface HighlightHeaderProps {
+export interface HighlightTitleProps {
 	children: Snippet;
 	class?: string;
 }

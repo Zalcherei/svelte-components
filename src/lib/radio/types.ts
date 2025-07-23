@@ -1,5 +1,6 @@
 export interface RadioProps {
-	class?: string;
-	checked?: boolean;
+	value?: string | number;
 	name?: string;
+	group?: string | number;
+	class?: string;
 }

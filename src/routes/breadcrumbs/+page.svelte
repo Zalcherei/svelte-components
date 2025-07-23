@@ -6,12 +6,13 @@
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
-	import HighlightHeader from '$lib/highlight/highlight-header.svelte';
+	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
+	import BreadcrumbsItem from '$lib/breadcrumbs/breadcrumbs-item.svelte';
 
 	let code = `<Breadcrumbs>
-    <li><a class="mr-2 hover:underline" href="/">Home</a></li>
-    <li><a class="mr-2 hover:underline" href="/">Project</a></li>
-    <li>Edit Project</li>
+    <BreadcrumbsItem href={base}>Home</BreadcrumbsItem>
+    <BreadcrumbsItem href={base}>Project</BreadcrumbsItem>
+    <BreadcrumbsItem>Edit Project</BreadcrumbsItem>
   </Breadcrumbs>`;
 </script>
 
@@ -23,22 +24,20 @@
 <h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight>
-	<HighlightHeader>
+	<HighlightTitle>
 		BreadCrumbs
 		<Button
-			variant="text"
-			size="icon"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/breadcrumbs"
 			target="_blank"
 		>
 			<GithubIcon />
 		</Button>
-	</HighlightHeader>
-	<HighlightDisplay class="p-4">
+	</HighlightTitle>
+	<HighlightDisplay>
 		<Breadcrumbs>
-			<li><a class="mr-2 hover:underline" href={base}>Home</a></li>
-			<li><a class="mr-2 hover:underline" href={base}>Project</a></li>
-			<li>Edit Project</li>
+			<BreadcrumbsItem href={base}>Home</BreadcrumbsItem>
+			<BreadcrumbsItem href={base}>Project</BreadcrumbsItem>
+			<BreadcrumbsItem>Edit Project</BreadcrumbsItem>
 		</Breadcrumbs>
 	</HighlightDisplay>
 	<HighlightCode {code} />

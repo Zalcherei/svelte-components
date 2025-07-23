@@ -1,11 +1,10 @@
 <script lang="ts">
-	import Header from '$lib/modal/modal-header.svelte';
-	import Content from '$lib/modal/modal-content.svelte';
-	import Footer from '$lib/modal/modal-footer.svelte';
 	import { quintOut } from 'svelte/easing';
 	import { fly } from 'svelte/transition';
 	import { cn } from '$lib/utils';
-	import type { ModalProps } from '$lib/modal/types';
+	import type { ModalProps } from '$lib/dialog/types';
+	import { writable } from 'svelte/store';
+	import { setContext } from 'svelte';
 
 	let {
 		children,

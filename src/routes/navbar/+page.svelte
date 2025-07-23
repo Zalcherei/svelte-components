@@ -6,18 +6,18 @@
 	import GithubIcon from '$lib/icons/github.svelte';
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
-	import HighlightHeader from '$lib/highlight/highlight-header.svelte';
+	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 
 	let code = `<Navbar>
-    <a class="font-medium" href="/">Svelte-Components</a>
-    <div class="flex-1"></div>
-    <Button variant="text">Learn</Button>
-  </Navbar>
-  <Navbar variant="shadow">
-    <a class="font-medium" href="/">Svelte-Components</a>
-    <div class="flex-1"></div>
-    <Button variant="text">Learn</Button>
-  </Navbar>`;
+		<a class="font-medium" href={base}>Svelte-Components</a>
+		<div class="flex-1"></div>
+		<Button>Learn</Button>
+	</Navbar>
+	<Navbar variant="shadow">
+		<a class="font-medium" href={base}>Svelte-Components</a>
+		<div class="flex-1"></div>
+		<Button>Learn</Button>
+	</Navbar>`;
 </script>
 
 <svelte:head>
@@ -28,27 +28,25 @@
 <h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight>
-	<HighlightHeader>
+	<HighlightTitle>
 		Navbar
 		<Button
-			variant="text"
-			size="icon"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/navbar"
 			target="_blank"
 		>
 			<GithubIcon />
 		</Button>
-	</HighlightHeader>
-	<HighlightDisplay class="p-4">
+	</HighlightTitle>
+	<HighlightDisplay>
 		<Navbar>
 			<a class="font-medium" href={base}>Svelte-Components</a>
 			<div class="flex-1"></div>
-			<Button variant="text">Learn</Button>
+			<Button>Learn</Button>
 		</Navbar>
 		<Navbar variant="shadow">
 			<a class="font-medium" href={base}>Svelte-Components</a>
 			<div class="flex-1"></div>
-			<Button variant="text">Learn</Button>
+			<Button>Learn</Button>
 		</Navbar>
 	</HighlightDisplay>
 	<HighlightCode {code} />

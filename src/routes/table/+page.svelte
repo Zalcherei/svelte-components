@@ -7,30 +7,34 @@
 	import Table from '$lib/table/table.svelte';
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
-	import HighlightHeader from '$lib/highlight/highlight-header.svelte';
+	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
+	import TableHead from '$lib/table/table-head.svelte';
+	import TableCell from '$lib/table/table-cell.svelte';
 
 	let code = `<Table>
-    <TableHeader>
-      <th class="min-w-8 px-4 text-start">#</th>
-      <th class="min-w-max px-4 text-start">Name</th>
-      <th class="min-w-max px-4 text-start">Lastname</th>
-      <th class="min-w-max px-4 text-start">Email</th>
-    </TableHeader>
-    <tbody>
-      <TableRow>
-        <td class="min-w-8 px-4 text-start">1</td>
-        <td class="min-w-max px-4 text-start">John</td>
-        <td class="min-w-max px-4 text-start">Doe</td>
-        <td class="min-w-max px-4 text-start">john.doe@email.email</td>
-      </TableRow>
-      <TableRow>
-        <td class="min-w-8 px-4 text-start">2</td>
-        <td class="min-w-max px-4 text-start">Jane</td>
-        <td class="min-w-max px-4 text-start">Doe</td>
-        <td class="min-w-max px-4 text-start">jane.doe@email.email</td>
-      </TableRow>
-    </tbody>
-  </Table>`;
+  <TableHeader>
+  	<TableRow>
+      <TableHead>#</TableHead>
+      <TableHead>Name</TableHead>
+      <TableHead>Lastname</TableHead>
+      <TableHead>Email</TableHead>
+  	</TableRow>
+  </TableHeader>
+  <tbody>
+  	<TableRow>
+      <TableCell>1</TableCell>
+      <TableCell>John</TableCell>
+      <TableCell>Doe</TableCell>
+      <TableCell>john.doe@email.email</TableCell>
+  	</TableRow>
+  	<TableRow>
+      <TableCell>2</TableCell>
+      <TableCell>Jane</TableCell>
+      <TableCell>Doe</TableCell>
+      <TableCell>jane.doe@email.email</TableCell>
+  	</TableRow>
+  </tbody>
+</Table>`;
 </script>
 
 <svelte:head>
@@ -41,37 +45,37 @@
 <h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight>
-	<HighlightHeader>
+	<HighlightTitle>
 		Table
 		<Button
-			variant="text"
-			size="icon"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/table"
 			target="_blank"
 		>
 			<GithubIcon />
 		</Button>
-	</HighlightHeader>
-	<HighlightDisplay class="p-4">
+	</HighlightTitle>
+	<HighlightDisplay>
 		<Table>
 			<TableHeader>
-				<th class="min-w-8 px-4 text-start">#</th>
-				<th class="min-w-max px-4 text-start">Name</th>
-				<th class="min-w-max px-4 text-start">Lastname</th>
-				<th class="min-w-max px-4 text-start">Email</th>
+				<TableRow>
+					<TableHead>#</TableHead>
+					<TableHead>Name</TableHead>
+					<TableHead>Lastname</TableHead>
+					<TableHead>Email</TableHead>
+				</TableRow>
 			</TableHeader>
 			<tbody>
 				<TableRow>
-					<td class="min-w-8 px-4 text-start">1</td>
-					<td class="min-w-max px-4 text-start">John</td>
-					<td class="min-w-max px-4 text-start">Doe</td>
-					<td class="min-w-max px-4 text-start">john.doe@email.email</td>
+					<TableCell>1</TableCell>
+					<TableCell>John</TableCell>
+					<TableCell>Doe</TableCell>
+					<TableCell>john.doe@email.email</TableCell>
 				</TableRow>
 				<TableRow>
-					<td class="min-w-8 px-4 text-start">2</td>
-					<td class="min-w-max px-4 text-start">Jane</td>
-					<td class="min-w-max px-4 text-start">Doe</td>
-					<td class="min-w-max px-4 text-start">jane.doe@email.email</td>
+					<TableCell>2</TableCell>
+					<TableCell>Jane</TableCell>
+					<TableCell>Doe</TableCell>
+					<TableCell>jane.doe@email.email</TableCell>
 				</TableRow>
 			</tbody>
 		</Table>

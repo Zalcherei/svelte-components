@@ -5,11 +5,8 @@
 	const { children, class: className }: HighlightProps = $props();
 </script>
 
-<div
-	class={cn(
-		'mb-4 flex w-full flex-col overflow-hidden rounded-md border border-gray-200 dark:border-neutral-700',
-		className
-	)}
+<figure
+	class={cn('overflow-hidden rounded-md border border-gray-200 dark:border-neutral-700', className)}
 >
 	{@render children?.()}
-</div>
+</figure>

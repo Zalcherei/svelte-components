@@ -1,29 +1,44 @@
 <script lang="ts">
 	import Button from '$lib/button/button.svelte';
-	import ChevronLeftIcon from '$lib/icons/chevron-left.svelte';
-	import ChevronRightIcon from '$lib/icons/chevron-right.svelte';
-	import type { PaginationProps } from '$lib/pagination/types';
-	import { cn } from '$lib/utils';
 
-	let { children, class: className, variant, controls = false }: PaginationProps = $props();
+	let {
+		currentPage = 1,
+		totalPages = 1,
+		onPageChange
+	}: {
+		currentPage: number;
+		totalPages: number;
+		onPageChange: (page: number) => void;
+	} = $props();
+
+	function nextPage() {
+		onPageChange(Math.min(currentPage + 1, totalPages));
+	}
+
+	function selectPage(page: number) {
+		onPageChange(page);
+	}
+
+	function previousPage() {
+		onPageChange(Math.max(currentPage - 1, 1));
+	}
 </script>
 
-<nav
-	class={cn(
-		'flex h-auto min-w-min items-center overflow-hidden rounded-md bg-white dark:bg-neutral-800 [&>button]:me-0 [&>button]:rounded-none',
-		className
-	)}
->
-	{#if controls}
-		<Button {variant}>
-			<ChevronLeftIcon />
-		</Button>
-	{/if}
-	{@render children?.()}
+<div class="flex items-center justify-center gap-2 p-4">
+	<Button class="disabled:opacity-50" onclick={previousPage} disabled={currentPage === 1}>
+		Previous
+	</Button>
 
-	{#if controls}
-		<Button {variant}>
-			<ChevronRightIcon />
+	{#each Array(totalPages) as _, i}
+		<Button
+			class={i + 1 === currentPage ? 'text-white dark:!bg-neutral-700' : ''}
+			onclick={() => selectPage(i + 1)}
+		>
+			{i + 1}
 		</Button>
-	{/if}
-</nav>
+	{/each}
+
+	<Button class="disabled:opacity-50" onclick={nextPage} disabled={currentPage === totalPages}>
+		Next
+	</Button>
+</div>

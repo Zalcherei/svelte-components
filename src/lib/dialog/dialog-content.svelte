@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
-	import type { ModalContentProps } from '$lib/modal/types';
+	import type { ModalContentProps } from '$lib/dialog/types';
 
 	let { children, class: className }: ModalContentProps = $props();
 </script>

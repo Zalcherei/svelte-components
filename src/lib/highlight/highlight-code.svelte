@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import Prism from 'prismjs';
 	import 'prismjs/themes/prism-okaidia.min.css';
 	import DOMPurify from 'dompurify';
-	import type { HighlightCodeProps } from '$lib/highlight/types';
+	import { onMount } from 'svelte';
+	import type { HighlightCodeProps } from './types';
 
 	let { language = 'html', highlightedCode, code = '' }: HighlightCodeProps = $props();
 
@@ -13,9 +13,7 @@
 	});
 </script>
 
-<div class="col-span-2 border-t border-gray-200 p-2 dark:border-neutral-700">
-	<pre
-		class="overflow-hidden rounded-md border-x bg-neutral-800 pt-3 pb-2 text-white dark:border-neutral-700">
-  {@html highlightedCode}
-</pre>
-</div>
+<pre class="overflow-auto border-t bg-neutral-800 dark:border-gray-700"><code
+		spellcheck="false"
+		class="block p-4 font-mono wrap-normal dark:text-white">{@html highlightedCode}</code
+	></pre>

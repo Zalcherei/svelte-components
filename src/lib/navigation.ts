@@ -1,11 +1,10 @@
-export const navigationUtils = [
+export const navigation = [
 	{
 		name: 'Actions',
 		children: [
 			{ name: 'Button', href: 'button' },
 			{ name: 'Dropdown Menu', href: 'dropdown-menu' },
-			{ name: 'Modal', href: 'modal' },
-			{ name: 'Swap', href: 'swap' },
+			{ name: 'Dialog', href: 'dialog' },
 			{ name: 'Theme Controller', href: 'theme-controller' }
 		]
 	},
@@ -20,7 +19,7 @@ export const navigationUtils = [
 			{ name: 'Chat bubble', href: 'chat-bubble' },
 			{ name: 'Collapse', href: 'collapse' },
 			{ name: 'Countdown', href: 'countdown' },
-			{ name: 'Diff', href: 'diff' },
+			{ name: 'Image Comparison', href: 'image-comparison' },
 			{ name: 'Kbd', href: 'kbd' },
 			{ name: 'Stat', href: 'stat' },
 			{ name: 'Table', href: 'table' },

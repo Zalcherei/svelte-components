@@ -3,11 +3,14 @@
 	import Checkbox from '$lib/checkbox/checkbox.svelte';
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
-	import HighlightHeader from '$lib/highlight/highlight-header.svelte';
+	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 	import Highlight from '$lib/highlight/highlight.svelte';
 	import GithubIcon from '$lib/icons/github.svelte';
 
-	let code = `<Checkbox>Checkbox</Checkbox>`;
+	let code = `<div class="flex items-center gap-2">
+    <Checkbox id="remember_me" />
+    <label for="remember_me">Remember me</label>
+  </div>`;
 </script>
 
 <svelte:head>
@@ -18,19 +21,20 @@
 <h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight>
-	<HighlightHeader>
+	<HighlightTitle>
 		Checkbox
 		<Button
-			variant="text"
-			size="icon"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/checkbox"
 			target="_blank"
 		>
 			<GithubIcon />
 		</Button>
-	</HighlightHeader>
-	<HighlightDisplay class="p-4">
-		<Checkbox>Checkbox</Checkbox>
+	</HighlightTitle>
+	<HighlightDisplay>
+		<div class="flex items-center gap-2">
+			<Checkbox id="remember_me" />
+			<label for="remember_me">Remember me</label>
+		</div>
 	</HighlightDisplay>
 	<HighlightCode {code} />
 </Highlight>

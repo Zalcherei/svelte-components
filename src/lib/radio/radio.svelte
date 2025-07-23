@@ -1,8 +1,14 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
 	import type { RadioProps } from '$lib/radio/types';
+	import CircleIcon from '$lib/icons/circle.svelte';
+	import CircleDotIcon from '$lib/icons/circle-dot.svelte';
 
-	let { class: className, checked = false, name }: RadioProps = $props();
+	let { value, name, group = $bindable(), class: className, ...restProps }: RadioProps = $props();
 </script>
 
-<input class={cn('me-1 h-5 w-5 cursor-pointer', className)} type="radio" {name} {checked} />
+<label class={cn('inline-flex cursor-pointer items-center', className)} {...restProps}>
+	<input type="radio" {name} {value} bind:group class="peer sr-only" {...restProps} />
+	<CircleIcon class="h-5 w-5 peer-checked:hidden" />
+	<CircleDotIcon class="hidden h-5 w-5 peer-checked:inline" />
+</label>

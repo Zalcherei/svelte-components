@@ -5,14 +5,16 @@
 	import GithubIcon from '$lib/icons/github.svelte';
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
-	import HighlightHeader from '$lib/highlight/highlight-header.svelte';
+	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 
-	let code = `<Pagination controls={true}>
-    <Button>1</Button>
-    <Button>2</Button>
-    <Button>3</Button>
-    <Button>4</Button>
-  </Pagination>`;
+	let code = `<Pagination {currentPage} {totalPages} onPageChange={handlePageChange} />`;
+
+	let currentPage = $state(1);
+	const totalPages = 10;
+
+	function handlePageChange(page: number) {
+		currentPage = page;
+	}
 </script>
 
 <svelte:head>
@@ -23,24 +25,17 @@
 <h3 class="mb-4 text-3xl">Usage</h3>
 
 <Highlight>
-	<HighlightHeader>
+	<HighlightTitle>
 		Pagination
 		<Button
-			variant="text"
-			size="icon"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/pagination"
 			target="_blank"
 		>
 			<GithubIcon />
 		</Button>
-	</HighlightHeader>
-	<HighlightDisplay class="p-4">
-		<Pagination variant="text" controls={true}>
-			<Button variant="text">1</Button>
-			<Button variant="text">2</Button>
-			<Button variant="text">3</Button>
-			<Button variant="text">4</Button>
-		</Pagination>
+	</HighlightTitle>
+	<HighlightDisplay>
+		<Pagination {currentPage} {totalPages} onPageChange={handlePageChange} />
 	</HighlightDisplay>
 	<HighlightCode {code} />
 </Highlight>

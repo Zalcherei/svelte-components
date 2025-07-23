@@ -2,7 +2,7 @@
 	import { cn } from '$lib/utils';
 	import type { HeroProps } from '$lib/hero/types';
 
-	let { children, class: className, title, description }: HeroProps = $props();
+	let { children, class: className }: HeroProps = $props();
 </script>
 
 <div
@@ -11,9 +11,5 @@
 		className
 	)}
 >
-	<h1 class="text-5xl font-bold">{title}</h1>
-	<p class="w-3/4 p-4 text-center">
-		{description}
-	</p>
 	{@render children?.()}
 </div>

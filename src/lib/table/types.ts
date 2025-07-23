@@ -10,6 +10,16 @@ export interface TableHeaderProps {
 	class?: string;
 }
 
+export interface TableHeadProps {
+	children: Snippet;
+	class?: string;
+}
+
+export interface TableCellProps {
+	children: Snippet;
+	class?: string;
+}
+
 export interface TableRowProps {
 	children: Snippet;
 	class?: string;

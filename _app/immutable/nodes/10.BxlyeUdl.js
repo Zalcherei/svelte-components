@@ -1,6 +1,0 @@
-import"../chunks/Bzak7iHL.js";import"../chunks/CeYaOX8l.js";import{b as a,h as b,s as e,f as l,a as t,$ as x,i as H,n as h}from"../chunks/D-EIk0JG.js";import{B as $}from"../chunks/D5WgC83u.js";import{H as P,a as z,b as C,c as G}from"../chunks/BPrxgYj8.js";import{G as S}from"../chunks/BQbZeLVQ.js";var k=a('<meta name="description" content="Svelte-Components"/>'),y=a("Button <!>",1),U=a("<!> <!> <!>",1),Z=a('<h3 class="mb-4 text-3xl">Usage</h3> <!>',1);function I(v){let g=`<Button variant="outlined" label="Button" />
-  <Button variant="text" label="Button" />
-  <Button label="Button" />
-  <Button label="Button" prepend={true} icon={Home} class="gap-2" />
-  <Button label="Button" append={true} icon={Home} class="gap-2" />
-  <Button size="icon" icon={Home} />`;var i=Z();b(r=>{var u=k();x.title="Svelte-Components - Button",t(r,u)});var f=e(l(i),2);P(f,{children:(r,u)=>{var m=U(),p=l(m);z(p,{children:(n,_)=>{h();var o=y(),c=e(l(o));$(c,{variant:"text",size:"icon",href:"https://github.com/Zalcherei/svelte-components/tree/main/src/lib/button",target:"_blank",children:(s,j)=>{S(s,{})},$$slots:{default:!0}}),t(n,o)},$$slots:{default:!0}});var d=e(p,2);C(d,{children:(n,_)=>{$(n,{children:(o,c)=>{h();var s=H("Button");t(o,s)},$$slots:{default:!0}})},$$slots:{default:!0}});var B=e(d,2);G(B,{code:g}),t(r,m)},$$slots:{default:!0}}),t(v,i)}export{I as component};

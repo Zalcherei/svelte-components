@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { TimelineProps } from '$lib/timeline/types';
+	import type { BaseProps } from '$lib/types';
 	import { cn } from '$lib/utils';
 
-	let { children, class: className }: TimelineProps = $props();
+	let { children, class: className }: BaseProps = $props();
 </script>
 
 <ul class={cn('mt-5 flex', className)}>

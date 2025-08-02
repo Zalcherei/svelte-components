@@ -11,24 +11,24 @@
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 
-	let dialog = $state(false);
-
 	let code = `<Dialog>
-    <DialogHeader>
-      <h4 class="font-medium">Modal</h4>
-      <Button onclick={handleClick}>
-        <XIcon />
-      </Button>
-    </DialogHeader>
-    <DialogContent>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis officiis nobis ex magnam
-      ab dolor quasi necessitatibus enim vel quo?
-    </DialogContent>
-    <DialogFooter>
-      <Button class="me-1" onclick={handleClick}>Accept</Button>
-      <Button class="me-1" onclick={handleClick}>Cancel</Button>
-    </DialogFooter>
+  <DialogHeader>
+    <h4 class="font-medium">Modal</h4>
+    <Button onclick={handleClick}>
+      <XIcon />
+    </Button>
+  </DialogHeader>
+  <DialogContent>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis officiis nobis ex magnam
+    ab dolor quasi necessitatibus enim vel quo?
+  </DialogContent>
+  <DialogFooter>
+    <Button class="me-1" onclick={handleClick}>Accept</Button>
+    <Button class="me-1" onclick={handleClick}>Cancel</Button>
+  </DialogFooter>
 </Dialog>`;
+
+	let open = $state(false);
 </script>
 
 <svelte:head>
@@ -36,12 +36,11 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-<h3 class="mb-4 text-3xl">Usage</h3>
-
 <Highlight>
 	<HighlightTitle>
 		Dialog
 		<Button
+			variant="ghost"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/dialog"
 			target="_blank"
 		>
@@ -49,12 +48,12 @@
 		</Button>
 	</HighlightTitle>
 	<HighlightDisplay>
-		<Button onclick={() => (dialog = !dialog)}>Dialog</Button>
-		{#if dialog}
+		<Button onclick={() => (open = !open)}>Dialog</Button>
+		{#if open}
 			<Dialog>
 				<DialogHeader>
 					<h4 class="font-medium">Dialog</h4>
-					<Button onclick={() => (dialog = !dialog)}>
+					<Button onclick={() => (open = !open)}>
 						<XIcon />
 					</Button>
 				</DialogHeader>
@@ -63,8 +62,8 @@
 					ab dolor quasi necessitatibus enim vel quo?
 				</DialogContent>
 				<DialogFooter>
-					<Button class="me-1" onclick={() => (dialog = !dialog)}>Accept</Button>
-					<Button class="me-1" onclick={() => (dialog = !dialog)}>Cancel</Button>
+					<Button class="me-1" onclick={() => (open = !open)}>Accept</Button>
+					<Button class="me-1" onclick={() => (open = !open)}>Cancel</Button>
 				</DialogFooter>
 			</Dialog>
 		{/if}

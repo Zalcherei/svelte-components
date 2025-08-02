@@ -1,9 +1,10 @@
 <script lang="ts">
-	import type { LinkProps } from '$lib/link/types';
+	import type { LinkProps } from '$lib/types';
+	import { cn } from '$lib/utils';
 
-	let { children, class: className, href, target }: LinkProps = $props();
+	const { children, href, target, class: className }: LinkProps = $props();
 </script>
 
-<a class="hover:text-gray-700 hover:underline {className}" {href} {target}>
+<a class={cn('hover:underline', className)} {href} {target}>
 	{@render children?.()}
 </a>

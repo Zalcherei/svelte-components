@@ -9,11 +9,11 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-{#each navigation as item}
+{#each navigation as item, index (index)}
 	<h3 class="my-4 text-3xl">{item.name}</h3>
 	{#if item.children}
 		<div class="grid grid-cols-5 gap-2">
-			{#each item.children as child}
+			{#each item.children as child, index (index)}
 				<Button aria-label={child.name} href="{base}/{child.href}">
 					{child.name}
 				</Button>

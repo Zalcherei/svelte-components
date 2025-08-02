@@ -1,14 +1,13 @@
 <script lang="ts">
 	import Button from '$lib/button/button.svelte';
-	import { cn } from '$lib/utils';
+	import type { Context, DropdownMenuTriggerProps } from '$lib/types';
 	import { getContext } from 'svelte';
-	import type { DropdownMenuContext, DropdownMenuTriggerProps } from '$lib/dropdown-menu/types';
 
-	const { children, class: className }: DropdownMenuTriggerProps = $props();
+	const { children }: DropdownMenuTriggerProps = $props();
 
-	const { toggle } = getContext<DropdownMenuContext>('dropdown-menu');
+	const { toggle } = getContext<Context>('dropdown-menu');
 </script>
 
-<Button class={cn(className)} onclick={toggle}>
+<Button onclick={toggle}>
 	{@render children?.()}
 </Button>

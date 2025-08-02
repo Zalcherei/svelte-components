@@ -1,6 +1,6 @@
 <script lang="ts">
+	import type { IndicatorProps } from '$lib/types';
 	import { cn } from '$lib/utils';
-	import type { IndicatorProps } from '$lib/indicator/types';
 
 	let { class: className }: IndicatorProps = $props();
 </script>

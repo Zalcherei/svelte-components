@@ -1,13 +1,13 @@
 <script lang="ts">
+	import type { TextareaProps } from '$lib/types';
 	import { cn } from '$lib/utils';
-	import type { TextareaProps } from '$lib/textarea/types';
 
 	let { class: className, placeholder, resize }: TextareaProps = $props();
 </script>
 
 <textarea
 	class={cn(
-		'w-full rounded-md border border-gray-200 p-2 outline-none focus:border-gray-300 dark:border-neutral-700 dark:bg-neutral-800',
+		'w-full rounded-md border bg-sidebar p-2 text-sidebar-foreground outline-none',
 		resize === 'resize'
 			? 'resize'
 			: resize === 'x'

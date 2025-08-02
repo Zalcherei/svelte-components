@@ -15,12 +15,11 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-<h3 class="mb-4 text-3xl">Usage</h3>
-
 <Highlight>
 	<HighlightTitle>
 		Textarea
 		<Button
+			variant="ghost"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/textarea"
 			target="_blank"
 		>

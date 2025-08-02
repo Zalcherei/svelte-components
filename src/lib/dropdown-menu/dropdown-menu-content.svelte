@@ -1,8 +1,8 @@
 <script lang="ts">
+	import type { Context, DropdownMenuContentProps } from '$lib/types';
 	import { cn } from '$lib/utils';
 	import { getContext } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import type { DropdownMenuContentProps, DropdownMenuContext } from '$lib/dropdown-menu/types';
 
 	const {
 		children,
@@ -11,13 +11,13 @@
 		class: className
 	}: DropdownMenuContentProps = $props();
 
-	const { open } = getContext<DropdownMenuContext>('dropdown-menu');
+	const { open } = getContext<Context>('dropdown-menu');
 </script>
 
 {#if $open}
 	<div
 		class={cn(
-			'absolute z-50 flex flex-col overflow-hidden rounded-md bg-white shadow dark:bg-neutral-800 [&>a]:rounded-none [&>button]:rounded-none',
+			'absolute z-50 flex flex-col overflow-hidden rounded-md bg-primary text-primary-foreground shadow [&>a]:rounded-none [&>button]:rounded-none',
 			className
 		)}
 		transition:transition={params}

@@ -6,13 +6,21 @@
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
+	import SelectTrigger from '$lib/select/select-trigger.svelte';
+	import SelectContent from '$lib/select/select-content.svelte';
+	import SelectOption from '$lib/select/select-option.svelte';
 
-	let code = `<Select>
-    <option selected>Selected</option>
-    <option>Option</option>
-    <option>Another</option>
-    <option>Last One</option>
-  </Select>`;
+	let code = `<Select type="single">
+	<SelectTrigger />
+  <SelectContent>
+  	<SelectOption value="first">First</SelectOption>
+  	<SelectOption value="second">Second</SelectOption>
+  	<SelectOption value="third">Third</SelectOption>
+  	<SelectOption value="fourth">Fourth</SelectOption>
+  </SelectContent>
+</Select>`;
+
+	let selectedValue: string | null = null;
 </script>
 
 <svelte:head>
@@ -20,12 +28,11 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-<h3 class="mb-4 text-3xl">Usage</h3>
-
 <Highlight>
 	<HighlightTitle>
 		Select
 		<Button
+			variant="ghost"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/select"
 			target="_blank"
 		>
@@ -33,11 +40,17 @@
 		</Button>
 	</HighlightTitle>
 	<HighlightDisplay>
-		<Select>
-			<option selected>Selected</option>
-			<option>Option</option>
-			<option>Another</option>
-			<option>Last One</option>
+		<Select bind:value={selectedValue}>
+			<SelectTrigger />
+			<SelectContent>
+				<SelectOption value="github">GitHub</SelectOption>
+				<SelectOption value="instagram">Instagram</SelectOption>
+				<SelectOption value="facebook">Facebook</SelectOption>
+				<SelectOption value="linkedin">LinkedIn</SelectOption>
+				<SelectOption value="twitter">Twitter</SelectOption>
+				<SelectOption value="reddit">Reddit</SelectOption>
+				<SelectOption data-value="clear">Clear selection</SelectOption>
+			</SelectContent>
 		</Select>
 	</HighlightDisplay>
 	<HighlightCode {code} />

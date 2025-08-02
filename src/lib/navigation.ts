@@ -16,12 +16,10 @@ export const navigation = [
 			{ name: 'Badge', href: 'badge' },
 			{ name: 'Card', href: 'card' },
 			{ name: 'Carousel', href: 'carousel' },
-			{ name: 'Chat bubble', href: 'chat-bubble' },
 			{ name: 'Collapse', href: 'collapse' },
 			{ name: 'Countdown', href: 'countdown' },
 			{ name: 'Image Comparison', href: 'image-comparison' },
 			{ name: 'Kbd', href: 'kbd' },
-			{ name: 'Stat', href: 'stat' },
 			{ name: 'Table', href: 'table' },
 			{ name: 'Timeline', href: 'timeline' }
 		]
@@ -30,13 +28,11 @@ export const navigation = [
 		name: 'Navigation',
 		children: [
 			{ name: 'Breadcrumbs', href: 'breadcrumbs' },
-			{ name: 'Bottom navigation', href: 'bottom-navigation' },
 			{ name: 'Link', href: 'link' },
 			{ name: 'Menu', href: 'menu' },
-			{ name: 'Navbar', href: 'navbar' },
 			{ name: 'Pagination', href: 'pagination' },
 			{ name: 'Steps', href: 'steps' },
-			{ name: 'Tab', href: 'tab' }
+			{ name: 'Tabs', href: 'tabs' }
 		]
 	},
 	{
@@ -46,7 +42,6 @@ export const navigation = [
 			{ name: 'Loading', href: 'loading' },
 			{ name: 'Progress', href: 'progress' },
 			{ name: 'Radial progress', href: 'radial-progress' },
-			{ name: 'Skeleton', href: 'skeleton' },
 			{ name: 'Toast', href: 'toast' },
 			{ name: 'Tooltip', href: 'tooltip' }
 		]
@@ -55,12 +50,10 @@ export const navigation = [
 		name: 'Data input',
 		children: [
 			{ name: 'Checkbox', href: 'checkbox' },
-			{ name: 'File input', href: 'file-input' },
 			{ name: 'Radio', href: 'radio' },
 			{ name: 'Range', href: 'range' },
-			{ name: 'Rating', href: 'rating' },
 			{ name: 'Select', href: 'select' },
-			{ name: 'Text input', href: 'text-input' },
+			{ name: 'Input', href: 'input' },
 			{ name: 'Textarea', href: 'textarea' },
 			{ name: 'Toggle', href: 'toggle' }
 		]
@@ -68,15 +61,9 @@ export const navigation = [
 	{
 		name: 'Layout',
 		children: [
-			{ name: 'Artboard', href: 'artboard' },
 			{ name: 'Divider', href: 'divider' },
 			{ name: 'Drawer', href: 'drawer' },
-			{ name: 'Footer', href: 'footer' },
-			{ name: 'Hero', href: 'hero' },
-			{ name: 'Indicator', href: 'indicator' },
-			{ name: 'Join (group items)', href: 'join' },
-			{ name: 'Mask', href: 'mask' },
-			{ name: 'Stack', href: 'stack' }
+			{ name: 'Indicator', href: 'indicator' }
 		]
 	}
 ];

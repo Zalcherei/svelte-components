@@ -7,13 +7,14 @@
 	import HighlightCode from '$lib/highlight/highlight-code.svelte';
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
+	import MenuItem from '$lib/menu/menu-item.svelte';
 
-	let code = `<Menu>
-    <Button href="/">Item 1</Button>
-    <Button href="/">Item 2</Button>
-    <Button href="/">Item 3</Button>
-    <Button href="/">Item 4</Button>
-  </Menu>`;
+	let code = `<Menu variant="col">
+  <MenuItem href="{base}/menu">Item #1</MenuItem>
+  <MenuItem href="{base}/menu">Item #2</MenuItem>
+  <MenuItem href="{base}/menu">Item #3</MenuItem>
+  <MenuItem href="{base}/menu">Item #4</MenuItem>
+</Menu>`;
 </script>
 
 <svelte:head>
@@ -21,12 +22,11 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-<h3 class="mb-4 text-3xl">Usage</h3>
-
 <Highlight>
 	<HighlightTitle>
 		Menu
 		<Button
+			variant="ghost"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/menu"
 			target="_blank"
 		>
@@ -35,10 +35,10 @@
 	</HighlightTitle>
 	<HighlightDisplay>
 		<Menu variant="col">
-			<Button href="{base}/">Item #1</Button>
-			<Button href="{base}/">Item #2</Button>
-			<Button href="{base}/">Item #3</Button>
-			<Button href="{base}/">Item #4</Button>
+			<MenuItem href="{base}/menu">Item #1</MenuItem>
+			<MenuItem href="{base}/menu">Item #2</MenuItem>
+			<MenuItem href="{base}/menu">Item #3</MenuItem>
+			<MenuItem href="{base}/menu">Item #4</MenuItem>
 		</Menu>
 	</HighlightDisplay>
 	<HighlightCode {code} />

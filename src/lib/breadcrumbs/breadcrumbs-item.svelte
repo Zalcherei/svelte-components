@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { BreadCrumbItemProps } from '$lib/breadcrumbs/types';
+	import type { BreadCrumbItemProps } from '$lib/types';
 
 	const { children, href }: BreadCrumbItemProps = $props();
 </script>

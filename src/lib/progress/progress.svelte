@@ -1,6 +1,6 @@
 <script lang="ts">
+	import type { ProgressProps } from '$lib/types';
 	import { cn } from '$lib/utils';
-	import type { ProgressProps } from '$lib/progress/types';
 
 	let { class: className, value }: ProgressProps = $props();
 </script>

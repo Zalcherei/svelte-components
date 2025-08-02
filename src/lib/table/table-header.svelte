@@ -1,8 +1,8 @@
 <script lang="ts">
+	import type { BaseProps } from '$lib/types';
 	import { cn } from '$lib/utils';
-	import type { TableHeaderProps } from '$lib/table/types';
 
-	let { children, class: className }: TableHeaderProps = $props();
+	const { children, class: className }: BaseProps = $props();
 </script>
 
 <thead class={cn('h-10 bg-gray-200 dark:bg-neutral-800', className)}>

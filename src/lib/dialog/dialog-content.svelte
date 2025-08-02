@@ -1,8 +1,8 @@
 <script lang="ts">
+	import type { BaseProps } from '$lib/types';
 	import { cn } from '$lib/utils';
-	import type { ModalContentProps } from '$lib/dialog/types';
 
-	let { children, class: className }: ModalContentProps = $props();
+	const { children, class: className }: BaseProps = $props();
 </script>
 
 <div class={cn('p-4', className)}>

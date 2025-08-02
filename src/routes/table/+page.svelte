@@ -42,12 +42,11 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-<h3 class="mb-4 text-3xl">Usage</h3>
-
 <Highlight>
 	<HighlightTitle>
 		Table
 		<Button
+			variant="ghost"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/table"
 			target="_blank"
 		>

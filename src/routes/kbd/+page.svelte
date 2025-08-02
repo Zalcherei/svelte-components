@@ -8,8 +8,8 @@
 	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 
 	let code = `<Kbd>Ctrl</Kbd>
-  <Kbd>+</Kbd>
-  <Kbd>Shift</Kbd>`;
+<Kbd>+</Kbd>
+<Kbd>Shift</Kbd>`;
 </script>
 
 <svelte:head>
@@ -17,12 +17,11 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-<h3 class="mb-4 text-3xl">Usage</h3>
-
 <Highlight>
 	<HighlightTitle>
 		KBD
 		<Button
+			variant="ghost"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/kbd"
 			target="_blank"
 		>

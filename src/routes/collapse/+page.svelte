@@ -8,14 +8,14 @@
 	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 
 	let code = `<Collapse title="Collapse">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, repellendus!
-  </Collapse>
-  <Collapse variant="shadow" title="Collapse">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, repellendus!
-  </Collapse>
-  <Collapse variant="outlined" title="Collapse">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, repellendus!
-  </Collapse>`;
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, repellendus!
+</Collapse>
+<Collapse variant="shadow" title="Collapse">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, repellendus!
+</Collapse>
+<Collapse variant="outlined" title="Collapse">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, repellendus!
+</Collapse>`;
 </script>
 
 <svelte:head>
@@ -23,12 +23,11 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-<h3 class="mb-4 text-3xl">Usage</h3>
-
 <Highlight>
 	<HighlightTitle>
 		Collapse
 		<Button
+			variant="ghost"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/collapse"
 			target="_blank"
 		>
@@ -39,10 +38,10 @@
 		<Collapse title="Collapse">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, repellendus!
 		</Collapse>
-		<Collapse variant="shadow" title="Collapse">
+		<Collapse title="Collapse">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, repellendus!
 		</Collapse>
-		<Collapse variant="outlined" title="Collapse">
+		<Collapse title="Collapse">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, repellendus!
 		</Collapse>
 	</HighlightDisplay>

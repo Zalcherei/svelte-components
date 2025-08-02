@@ -8,9 +8,9 @@
 	import GithubIcon from '$lib/icons/github.svelte';
 
 	let code = `<div class="flex items-center gap-2">
-    <Checkbox id="remember_me" />
-    <label for="remember_me">Remember me</label>
-  </div>`;
+  <Checkbox id="remember_me" />
+  <label for="remember_me">Remember me</label>
+</div>`;
 </script>
 
 <svelte:head>
@@ -18,12 +18,11 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-<h3 class="mb-4 text-3xl">Usage</h3>
-
 <Highlight>
 	<HighlightTitle>
 		Checkbox
 		<Button
+			variant="ghost"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/checkbox"
 			target="_blank"
 		>

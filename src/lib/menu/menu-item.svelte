@@ -1,18 +1,12 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
-	import type { MenuItemProps } from '$lib/menu/types';
+	import Button from '$lib/button/button.svelte';
+	import type { MenuItemProps } from '$lib/types';
 
-	let { children, class: className, href }: MenuItemProps = $props();
+	let { children, href }: MenuItemProps = $props();
 </script>
 
 <li>
-	<a
-		class={cn(
-			'flex h-10 w-full items-center px-4 hover:bg-gray-100 dark:hover:bg-neutral-700',
-			className
-		)}
-		{href}
-	>
+	<Button {href}>
 		{@render children?.()}
-	</a>
+	</Button>
 </li>

@@ -1,15 +1,10 @@
 <script lang="ts">
+	import type { BaseProps } from '$lib/types';
 	import { cn } from '$lib/utils';
-	import type { ModalHeaderProps } from '$lib/dialog/types';
 
-	let { children, class: className }: ModalHeaderProps = $props();
+	const { children, class: className }: BaseProps = $props();
 </script>
 
-<div
-	class={cn(
-		'flex h-16 w-full items-center justify-between border-b border-gray-200 px-4',
-		className
-	)}
->
+<div class={cn('flex h-16 w-full items-center justify-between border-b px-4', className)}>
 	{@render children?.()}
 </div>

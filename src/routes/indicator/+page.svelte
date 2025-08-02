@@ -7,10 +7,10 @@
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 
-	let code = `<Button>
-  	Button
-  	<Indicator />
-  </Button>`;
+	let code = `<Button class="relative">
+  Button
+  <Indicator />
+</Button>`;
 </script>
 
 <svelte:head>
@@ -18,12 +18,11 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-<h3 class="mb-4 text-3xl">Usage</h3>
-
 <Highlight>
 	<HighlightTitle>
 		Indicator
 		<Button
+			variant="ghost"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/indicator"
 			target="_blank"
 		>
@@ -31,7 +30,7 @@
 		</Button>
 	</HighlightTitle>
 	<HighlightDisplay>
-		<Button>
+		<Button class="relative">
 			Button
 			<Indicator />
 		</Button>

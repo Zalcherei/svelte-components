@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ImageComparisonProps } from '$lib/image-comparison/types';
+	import type { ImageComparisonProps } from '$lib/types';
 
 	let {
 		before,

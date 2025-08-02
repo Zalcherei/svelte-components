@@ -3,7 +3,7 @@
 	import 'prismjs/themes/prism-okaidia.min.css';
 	import DOMPurify from 'dompurify';
 	import { onMount } from 'svelte';
-	import type { HighlightCodeProps } from './types';
+	import type { HighlightCodeProps } from '$lib/types';
 
 	let { language = 'html', highlightedCode, code = '' }: HighlightCodeProps = $props();
 
@@ -13,7 +13,8 @@
 	});
 </script>
 
-<pre class="overflow-auto border-t bg-neutral-800 dark:border-gray-700"><code
+<pre
+	class="overflow-auto border-t bg-primary text-primary-foreground dark:bg-sidebar dark:text-sidebar-primary"><code
 		spellcheck="false"
-		class="block p-4 font-mono wrap-normal dark:text-white">{@html highlightedCode}</code
+		class="block p-4 font-mono wrap-normal">{@html highlightedCode}</code
 	></pre>

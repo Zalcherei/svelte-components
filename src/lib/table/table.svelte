@@ -1,8 +1,8 @@
 <script lang="ts">
+	import type { BaseProps } from '$lib/types';
 	import { cn } from '$lib/utils';
-	import type { TableProps } from '$lib/table/types';
 
-	let { children, class: className }: TableProps = $props();
+	const { children, class: className }: BaseProps = $props();
 </script>
 
 <table class={cn('w-full overflow-hidden rounded-md', className)}>

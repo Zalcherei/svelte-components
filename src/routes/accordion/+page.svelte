@@ -9,18 +9,27 @@
 	import AccordionTrigger from '$lib/accordion/accordion-trigger.svelte';
 	import AccordionContent from '$lib/accordion/accordion-content.svelte';
 
-	let code = `<Accordion label="Accordion Item #1">
+	let code = `<Accordion>
+  <AccordionTrigger>Accordion Item #1</AccordionTrigger>
+  <AccordionContent>
   	Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, ut.
-  </Accordion>
-  <Accordion variant="shadow" label="Accordion Item #2">
+  </AccordionContent>
+</Accordion>
+<Accordion>
+  <AccordionTrigger>Accordion Item #2</AccordionTrigger>
+  <AccordionContent>
   	Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis tenetur quaerat at
   	necessitatibus quia. Est, eos! Similique, eum! Minus, velit.
-  </Accordion>
-  <Accordion variant="outlined" label="Accordion Item #3">
+  </AccordionContent>
+</Accordion>
+<Accordion>
+  <AccordionTrigger>Accordion Item #3</AccordionTrigger>
+  <AccordionContent>
   	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolorum officiis ullam
-  	ducimus, deserunt tenetur fugit molestiae voluptatibus aut iste, debitis earum, excepturi quidem
-  	mollitia nam impedit adipisci accusantium incidunt.
-  </Accordion>`;
+  	ducimus, deserunt tenetur fugit molestiae voluptatibus aut iste, debitis earum, excepturi
+  	quidem mollitia nam impedit adipisci accusantium incidunt.
+  </AccordionContent>
+</Accordion>`;
 </script>
 
 <svelte:head>
@@ -28,12 +37,11 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-<h3 class="mb-4 text-3xl">Usage</h3>
-
 <Highlight>
 	<HighlightTitle>
 		Accordion
 		<Button
+			variant="ghost"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/accordion"
 			target="_blank"
 		>
@@ -41,20 +49,20 @@
 		</Button>
 	</HighlightTitle>
 	<HighlightDisplay>
-		<Accordion>
+		<Accordion class="mb-1">
 			<AccordionTrigger>Accordion Item #1</AccordionTrigger>
 			<AccordionContent>
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, ut.
 			</AccordionContent>
 		</Accordion>
-		<Accordion variant="shadow">
+		<Accordion class="mb-1">
 			<AccordionTrigger>Accordion Item #2</AccordionTrigger>
 			<AccordionContent>
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis tenetur quaerat at
 				necessitatibus quia. Est, eos! Similique, eum! Minus, velit.
 			</AccordionContent>
 		</Accordion>
-		<Accordion variant="outlined">
+		<Accordion class="mb-1">
 			<AccordionTrigger>Accordion Item #3</AccordionTrigger>
 			<AccordionContent>
 				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolorum officiis ullam

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { BreadcrumbsProps } from '$lib/breadcrumbs/types';
+	import type { BaseProps } from '$lib/types';
 	import { cn } from '$lib/utils';
 
-	let { children, class: className }: BreadcrumbsProps = $props();
+	let { children, class: className }: BaseProps = $props();
 </script>
 
 <div>

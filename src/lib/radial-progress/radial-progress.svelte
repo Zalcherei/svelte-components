@@ -1,6 +1,6 @@
 <script lang="ts">
+	import type { RadialProgressProps } from '$lib/types';
 	import { cn } from '$lib/utils';
-	import type { RadialProgressProps } from '$lib/radial-progress/types';
 
 	let { class: className, progress = 0, theme }: RadialProgressProps = $props();
 </script>

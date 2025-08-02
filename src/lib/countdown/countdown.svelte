@@ -1,7 +1,7 @@
 <script lang="ts">
+	import type { CountdownProps } from '$lib/types';
 	import { cn } from '$lib/utils';
 	import { onMount } from 'svelte';
-	import type { CountdownProps } from '$lib/countdown/types';
 
 	const { timer = 0, class: className }: CountdownProps = $props();
 

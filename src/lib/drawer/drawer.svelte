@@ -1,19 +1,23 @@
 <script lang="ts">
-	import type { DrawerProps } from '$lib/drawer/types';
+	import type { DrawerProps } from '$lib/types';
+	import { cn } from '$lib/utils';
 	import { slide } from 'svelte/transition';
 
-	let {
+	const {
 		children,
-		open = $bindable(),
-		class: className,
+		open = $bindable(false),
 		params = { axis: 'x' },
-		transition = slide
+		transition = slide,
+		class: className
 	}: DrawerProps = $props();
 </script>
 
 {#if open}
 	<div
-		class="flex h-screen w-64 flex-col overflow-y-auto border-r border-gray-200 bg-white dark:border-neutral-700 dark:bg-neutral-800 {className}"
+		class={cn(
+			'flex h-screen w-64 min-w-64 flex-col border-r bg-sidebar text-sidebar-foreground',
+			className
+		)}
 		transition:transition={params}
 	>
 		{@render children?.()}

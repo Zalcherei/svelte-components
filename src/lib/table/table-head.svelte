@@ -1,8 +1,8 @@
 <script lang="ts">
+	import type { BaseProps } from '$lib/types';
 	import { cn } from '$lib/utils';
-	import type { TableHeadProps } from '$lib/table/types';
 
-	const { children, class: className }: TableHeadProps = $props();
+	const { children, class: className }: BaseProps = $props();
 </script>
 
 <th class={cn('min-w-8 px-4', className)}>

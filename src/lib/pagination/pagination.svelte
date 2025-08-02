@@ -1,15 +1,8 @@
 <script lang="ts">
 	import Button from '$lib/button/button.svelte';
+	import type { PaginationProps } from '$lib/types';
 
-	let {
-		currentPage = 1,
-		totalPages = 1,
-		onPageChange
-	}: {
-		currentPage: number;
-		totalPages: number;
-		onPageChange: (page: number) => void;
-	} = $props();
+	let { currentPage = 1, totalPages = 1, onPageChange }: PaginationProps = $props();
 
 	function nextPage() {
 		onPageChange(Math.min(currentPage + 1, totalPages));
@@ -24,17 +17,17 @@
 	}
 </script>
 
-<div class="flex items-center justify-center gap-2 p-4">
+<div class="flex items-center justify-center gap-1">
 	<Button class="disabled:opacity-50" onclick={previousPage} disabled={currentPage === 1}>
 		Previous
 	</Button>
 
-	{#each Array(totalPages) as _, i}
+	{#each Array(totalPages) as _, index (index)}
 		<Button
-			class={i + 1 === currentPage ? 'text-white dark:!bg-neutral-700' : ''}
-			onclick={() => selectPage(i + 1)}
+			class={index + 1 === currentPage ? 'bg-primary/90' : ''}
+			onclick={() => selectPage(index + 1)}
 		>
-			{i + 1}
+			{index + 1}
 		</Button>
 	{/each}
 

@@ -1,5 +1,7 @@
 <script lang="ts">
-	let { children, class: className = '', id = '' } = $props();
+	import type { ToggleProps } from '$lib/types';
+
+	let { children, class: className, id }: ToggleProps = $props();
 </script>
 
 <label for={id} class="relative flex cursor-pointer items-center {className}">

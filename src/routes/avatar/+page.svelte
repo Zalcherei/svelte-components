@@ -7,9 +7,7 @@
 	import HighlightDisplay from '$lib/highlight/highlight-display.svelte';
 	import HighlightTitle from '$lib/highlight/highlight-title.svelte';
 
-	let code = `<Avatar size="lg" alt="large" src="https://picsum.photos/64/64" />
-  <Avatar size="md" alt="medium" src="https://picsum.photos/48/48" />
-  <Avatar size="sm" alt="small" src="https://picsum.photos/32/32" />`;
+	let code = `<Avatar alt="large" src="https://picsum.photos/48/48" />`;
 </script>
 
 <svelte:head>
@@ -17,12 +15,11 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-<h3 class="mb-4 text-3xl">Usage</h3>
-
 <Highlight>
 	<HighlightTitle>
 		Avatar
 		<Button
+			variant="ghost"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/avatar"
 			target="_blank"
 		>
@@ -31,9 +28,7 @@
 	</HighlightTitle>
 	<HighlightDisplay>
 		<div class="flex items-center gap-2">
-			<Avatar size="lg" alt="large" src="https://picsum.photos/64/64" />
-			<Avatar size="md" alt="medium" src="https://picsum.photos/48/48" />
-			<Avatar size="sm" alt="small" src="https://picsum.photos/32/32" />
+			<Avatar alt="large" src="https://picsum.photos/48/48" />
 		</div>
 	</HighlightDisplay>
 	<HighlightCode {code} />

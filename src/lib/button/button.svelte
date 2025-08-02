@@ -1,12 +1,32 @@
 <script lang="ts">
+	import type { ButtonProps } from '$lib/types';
 	import { cn } from '$lib/utils';
-	import type { ButtonProps } from '$lib/button/types';
+	import { tv } from 'tailwind-variants';
 
-	let {
+	const buttonVariants = tv({
+		base: "focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+		variants: {
+			variant: {
+				default: 'bg-primary text-primary-foreground shadow-xs hover:bg-primary/90',
+				ghost: 'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50'
+			},
+			size: {
+				default: 'h-9 px-4 py-2 has-[>svg]:px-3',
+				icon: 'size-9'
+			}
+		},
+		defaultVariants: {
+			variant: 'default',
+			size: 'default'
+		}
+	});
+
+	const {
 		children,
 		href,
 		type = 'button',
-		tag = 'button',
+		variant = 'default',
+		size = 'default',
 		disabled,
 		class: className,
 		...restProps
@@ -14,31 +34,11 @@
 </script>
 
 {#if href}
-	<a
-		role="button"
-		{href}
-		class={cn(
-			'relative inline-flex items-center justify-center rounded-md bg-white px-4 py-2 transition-colors hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700',
-			className
-		)}
-		{...restProps}
-	>
+	<a role="button" {href} class={cn(buttonVariants({ variant, size }), className)} {...restProps}>
 		{@render children?.()}
 	</a>
-{:else if tag === 'button'}
-	<button
-		{type}
-		class={cn(
-			'relative inline-flex items-center justify-center rounded-md bg-white px-4 py-2 transition-colors hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700',
-			className
-		)}
-		{disabled}
-		{...restProps}
-	>
+{:else}
+	<button {type} class={cn(buttonVariants({ variant, size }), className)} {disabled} {...restProps}>
 		{@render children?.()}
 	</button>
-{:else}
-	<svelte:element this={tag} {...restProps}>
-		{@render children?.()}
-	</svelte:element>
 {/if}

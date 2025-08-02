@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
-	import type { RadioProps } from '$lib/radio/types';
 	import CircleIcon from '$lib/icons/circle.svelte';
 	import CircleDotIcon from '$lib/icons/circle-dot.svelte';
+	import type { RadioProps } from '$lib/types';
 
 	let { value, name, group = $bindable(), class: className, ...restProps }: RadioProps = $props();
 </script>

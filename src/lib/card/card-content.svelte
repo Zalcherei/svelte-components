@@ -1,8 +1,8 @@
 <script lang="ts">
+	import type { BaseProps } from '$lib/types';
 	import { cn } from '$lib/utils';
-	import type { CardContentProps } from '$lib/card/types';
 
-	const { children, class: className }: CardContentProps = $props();
+	const { children, class: className }: BaseProps = $props();
 </script>
 
 <div class={cn('p-4', className)}>

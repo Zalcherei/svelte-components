@@ -16,10 +16,10 @@
 	];
 
 	let code = `<Steps>
-    {#each steps as { id, title, complete, last }}
-      <Step {title} {complete} {id} {last} />
-    {/each}
-  </Steps>`;
+  {#each steps as { id, title, complete, last }}
+    <Step {title} {complete} {id} {last} />
+  {/each}
+</Steps>`;
 </script>
 
 <svelte:head>
@@ -27,12 +27,11 @@
 	<meta name="description" content="Svelte-Components" />
 </svelte:head>
 
-<h3 class="mb-4 text-3xl">Usage</h3>
-
 <Highlight>
 	<HighlightTitle>
 		Steps
 		<Button
+			variant="ghost"
 			href="https://github.com/Zalcherei/svelte-components/tree/main/src/lib/steps"
 			target="_blank"
 		>
@@ -41,7 +40,7 @@
 	</HighlightTitle>
 	<HighlightDisplay>
 		<Steps>
-			{#each steps as { id, title, complete, last }}
+			{#each steps as { id, title, complete, last }, index (index)}
 				<Step {title} {complete} {id} {last} />
 			{/each}
 		</Steps>

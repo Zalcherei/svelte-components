@@ -1,1 +1,0 @@
-import"./DsnmJJEf.js";import{p as i,b as r,t as c,a as l,j as f}from"./DpSOr8JY.js";import{c as o,a as d,s as h,b as s}from"./CWUM8KrF.js";var n=r("<img/>");function g(e,a){i(a,!0);var t=n();c(m=>{h(t,1,m),s(t,"alt",a.alt),s(t,"src",a.src)},[()=>o(d("rounded-md",a.size==="lg"?"h-16 w-16":a.size==="md"?"h-12 w-12":a.size==="sm"?"h-8 w-8":"",a.class))]),l(e,t),f()}export{g as A};

@@ -12,27 +12,29 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
-		"deploy": "gh-pages -d build"
+		"deploy": "gh-pages -d build -t -f"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
-		"@sveltejs/adapter-auto": "^6.0.1",
+		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.22.0",
 		"@sveltejs/vite-plugin-svelte": "^6.0.0",
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/typography": "^0.5.15",
 		"@tailwindcss/vite": "^4.0.0",
-		"@types/prismjs": "^1.26.5",
 		"clsx": "^2.1.1",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^3.0.0",
 		"gh-pages": "^6.3.0",
 		"globals": "^16.0.0",
+		"mdsvex": "^0.12.6",
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.11",
+		"rollup-plugin-visualizer": "^6.0.3",
+		"shiki": "^3.9.2",
 		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
 		"tailwind-merge": "^3.3.1",
@@ -49,9 +51,5 @@
 			"@tailwindcss/oxide",
 			"esbuild"
 		]
-	},
-	"dependencies": {
-		"dompurify": "^3.2.6",
-		"prismjs": "^1.30.0"
 	}
 }

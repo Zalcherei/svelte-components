@@ -119,4 +119,13 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+
+	.shiki {
+		padding: 0.5rem;
+		width: 100%;
+	}
+
+	.shiki .line {
+		line-height: 2;
+	}
 }

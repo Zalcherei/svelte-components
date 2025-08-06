@@ -16,7 +16,7 @@
 <ul
 	bind:this={dropdown}
 	role="listbox"
-	class="select-dropdown border-px absolute top-full left-0 w-full min-w-max rounded-md p-2.5 shadow dark:border-neutral-700 dark:bg-neutral-800 dark:text-white"
+	class="select-dropdown border-px absolute top-full left-0 w-full min-w-max rounded-md bg-sidebar p-2.5 shadow"
 	class:hidden={!$isOpen}
 	tabindex="0"
 >
